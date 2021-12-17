@@ -1,0 +1,25 @@
+.banner {
+  position: relative;
+  display: flex;
+  min-height: 48px;
+  align-items: center;
+  padding: var(--space-small) var(--space-medium) var(--space-small) 44px;
+}
+
+.informative {
+  background-color: var(--color-selection-b);
+}
+.upsell {
+  background-color: var(--color-green);
+  color: var(--color-white);
+}
+.warning {
+  background-color: var(--color-yellow);
+}
+
+.icon {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  transform: translate(-50%, -50%);
+}

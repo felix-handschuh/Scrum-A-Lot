@@ -12,7 +12,7 @@ export default function () {
 function Notepad() {
     const [userStartedPoll, setUserStartedPoll] = useSyncedState('userStartedPoll', '')
 
-    const [text, setText] = useSyncedState('text', 'Hello\nWidgets')
+    const [text, setText] = useSyncedState('text', 'Description')
     const items: Array<WidgetPropertyMenuItem> = [
         {
             itemType: 'action',
@@ -25,7 +25,7 @@ function Notepad() {
     }: WidgetPropertyEvent): Promise<void> {
         await new Promise<void>(function (resolve: () => void): void {
             if (propertyName === 'edit') {
-                showUI({ width: 240, height: 144 }, { text })
+                showUI({ width: 240, height: 344 }, { text })
                 once('UPDATE_TEXT', function (text: string): void {
                     setText(text)
                     resolve()
@@ -40,49 +40,74 @@ function Notepad() {
             verticalAlignItems="center"
             padding={16}
             fill="#FFFFFF"
+            width="fill-parent"
             cornerRadius={8}
-            spacing={12}
+            spacing={8}
             effect={{
                 type: 'drop-shadow',
-                color: { r: 0, g: 0, b: 0, a: 0.2 },
-                offset: { x: 0, y: 2 },
-                blur: 2,
-                spread: 2,
+                color: { r: 0, g: 0, b: 0, a: 0.16 },
+                offset: { x: 0, y: 1 },
+                blur: 3,
+                spread: 0,
             }}
         >
-            <Text fontSize={16} fontWeight="semi-bold" horizontalAlignText='left' width='fill-parent' fill="#363F72">Scrumalot</Text>
+            
             <Rectangle
-                height={2}
-                fill="#E4E7EC"
+                height={32}
+                fill="#F2F4F7"
+                cornerRadius={8}
+                width="fill-parent"
+            
+            />
+
+         
+            
+            
+            <Rectangle
+                height={1}
+                fill="#FFFFFF"
                 width="fill-parent"
             />
+            
+
+            <Rectangle
+                height={16}
+                fill="#F9FAFB"
+                cornerRadius={8}
+                width="fill-parent"
+            />
+
+            <Rectangle
+                height={16}
+                fill="#F9FAFB"
+                cornerRadius={8}
+                width="fill-parent"
+            />
+
+
+
             <AutoLayout
                 direction='vertical'
                 horizontalAlignItems='start'
                 verticalAlignItems='start'
 
             >
-                {text.split('\n').map(line => {
-                    return line ? (
-                        <Text fontSize={12} horizontalAlignText='left' width='fill-parent'>
-                            {line}
-                        </Text>
-                    ) : null
-                })}
+                
             </AutoLayout>
             <AutoLayout
                 fill="#C8CCE5"
-                cornerRadius={4}
-                padding={{ left: 16, right: 16, top: 8, bottom: 8 }}
+                cornerRadius={8}
+                padding={{ left: 96, right: 96, top: 12, bottom: 12 }}
                 onClick={() => {
                     var user = figma.activeUsers[0].photoUrl
                     console.log(user)
-                    showUI({ width: 240, height: 144 }, { user })
+                    showUI({ width: 88, height: 44 }, { user })
                     return new Promise<void>(() => { })
                 }}
             >
-                <Text fontSize={12} fontWeight="semi-bold" horizontalAlignText='center' width='fill-parent' fill="#363F72">Vote</Text>
+                <Text fontSize={14} fontWeight="semi-bold" horizontalAlignText='center' width='fill-parent' fill="#000E52">Create Story</Text>
             </AutoLayout>
         </AutoLayout>
     )
 }
+

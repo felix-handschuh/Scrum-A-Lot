@@ -1,0 +1,90 @@
+.segmentedControl {
+  position: relative;
+  z-index: var(--z-index-1);
+  display: inline-block;
+  border-radius: var(--border-radius-2);
+}
+.disabled {
+  opacity: var(--opacity-30);
+}
+
+.labels {
+  display: flex;
+}
+
+.label {
+  position: relative;
+  display: block;
+}
+
+.input {
+  /* These rules are needed to ensure that focus remains within `.segmentedControl` */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.disabled .input {
+  cursor: not-allowed;
+}
+
+.children {
+  display: flex;
+  min-width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-black-80);
+  cursor: not-allowed;
+}
+.input:checked ~ .children {
+  background-color: var(--color-silver);
+  border-radius: var(--border-radius-2);
+}
+.input:disabled ~ .children {
+  opacity: var(--opacity-30);
+}
+.segmentedControl:not(.disabled):hover .input:checked ~ .children,
+.segmentedControl:not(.disabled):focus-within .input:checked ~ .children {
+  border-radius: 0;
+}
+.segmentedControl:not(.disabled):hover
+  .label:first-child
+  .input:checked
+  ~ .children {
+  border-bottom-left-radius: var(--border-radius-2);
+  border-top-left-radius: var(--border-radius-2);
+}
+.segmentedControl:not(.disabled):hover
+  .label:last-child
+  .input:checked
+  ~ .children {
+  border-bottom-right-radius: var(--border-radius-2);
+  border-top-right-radius: var(--border-radius-2);
+}
+
+.text {
+  padding: 4px 10px;
+}
+
+.border {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--border-radius-2);
+  pointer-events: none;
+}
+.segmentedControl:not(.disabled):hover .border {
+  border: 1px solid var(--color-silver);
+}
+.segmentedControl:not(.disabled):focus-within .border {
+  top: -1px;
+  bottom: -1px;
+  border: 2px solid var(--color-accent);
+}

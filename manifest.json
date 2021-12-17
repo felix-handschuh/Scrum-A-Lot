@@ -4,7 +4,6 @@
   "editorType": [
     "figjam"
   ],
-  "permissions": ["activeusers"],
   "containsWidget": true,
   "id": "scrumalot",
   "name": "Scrumalot",

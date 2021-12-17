@@ -1,0 +1,74 @@
+.dropdown {
+  position: relative;
+  z-index: var(--z-index-1);
+  display: flex;
+  height: 28px;
+  align-items: center;
+  padding-left: var(--space-extra-small);
+  color: var(--color-black-80);
+}
+.dropdown:not(.disabled):focus-within {
+  z-index: var(--z-index-2); /* stack `.dropdown` over its sibling elements */
+  outline: 0;
+}
+.disabled {
+  opacity: var(--opacity-30);
+}
+
+.disabled,
+.disabled > * {
+  cursor: not-allowed;
+}
+
+.icon {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  color: var(--color-black-30);
+  pointer-events: none; /* so that clicking the icon focuses the dropdown */
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.value {
+  overflow: hidden;
+  margin-right: 6px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dropdown:not(.disabled):hover .value,
+.dropdown:not(.disabled):focus .value,
+.dropdown:not(.disabled):focus-within .value {
+  flex-grow: 1;
+}
+.placeholder {
+  color: var(--color-black-30);
+}
+.hasIcon .value {
+  padding-left: var(--space-extra-large);
+}
+
+.chevronIcon {
+  margin-right: var(--space-extra-small);
+  color: var(--color-black-30);
+}
+.dropdown:not(.disabled):hover .chevronIcon {
+  color: var(--color-black-80);
+}
+
+.border {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-width: 1px;
+  border-color: var(--color-silver);
+  border-radius: var(--border-radius-2);
+}
+.noBorder .border {
+  border-color: transparent;
+}
+.noBorder:not(.disabled):hover .border {
+  border-color: var(--color-silver);
+}
