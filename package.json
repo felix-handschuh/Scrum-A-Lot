@@ -7,9 +7,9 @@
   "devDependencies": {
     "@create-figma-plugin/build": "^1.7.2",
     "@create-figma-plugin/tsconfig": "^1.7.2",
-    "@figma/plugin-typings": "1.37.0",
-    "@figma/widget-typings": "1.0.2",
-    "typescript": "^4"
+    "@figma/plugin-typings": "^1.40.0",
+    "@figma/widget-typings": "1.0.3",
+    "typescript": "^4.5.4"
   },
   "scripts": {
     "build": "build-figma-plugin --typecheck --minify",
@@ -18,6 +18,10 @@
   "figma-plugin": {
     "editorType": [
       "figjam"
+    ],
+    "permissions": [
+      "currentuser",
+      "activeusers"
     ],
     "containsWidget": true,
     "id": "scrumalot",

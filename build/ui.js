@@ -228,20 +228,20 @@
     });
   }
   function L(l3, u3, i3, t3, r3, o3, f3, c3) {
-    var s3, a3, v3, y3 = i3.props, p2 = u3.props, d2 = u3.type, _2 = 0;
-    if (d2 === "svg" && (r3 = true), o3 != null) {
+    var s3, a3, v3, y3 = i3.props, p2 = u3.props, d3 = u3.type, _2 = 0;
+    if (d3 === "svg" && (r3 = true), o3 != null) {
       for (; _2 < o3.length; _2++)
-        if ((s3 = o3[_2]) && (s3 === l3 || (d2 ? s3.localName == d2 : s3.nodeType == 3))) {
+        if ((s3 = o3[_2]) && "setAttribute" in s3 == !!d3 && (d3 ? s3.localName === d3 : s3.nodeType === 3)) {
           l3 = s3, o3[_2] = null;
           break;
         }
     }
     if (l3 == null) {
-      if (d2 === null)
+      if (d3 === null)
         return document.createTextNode(p2);
-      l3 = r3 ? document.createElementNS("http://www.w3.org/2000/svg", d2) : document.createElement(d2, p2.is && p2), o3 = null, c3 = false;
+      l3 = r3 ? document.createElementNS("http://www.w3.org/2000/svg", d3) : document.createElement(d3, p2.is && p2), o3 = null, c3 = false;
     }
-    if (d2 === null)
+    if (d3 === null)
       y3 === p2 || c3 && l3.data === p2 || (l3.data = p2);
     else {
       if (o3 = o3 && n.call(l3.childNodes), a3 = (y3 = i3.props || e).dangerouslySetInnerHTML, v3 = p2.dangerouslySetInnerHTML, !c3) {
@@ -252,10 +252,10 @@
       }
       if (C(l3, p2, y3, r3, c3), v3)
         u3.__k = [];
-      else if (_2 = u3.props.children, w(l3, Array.isArray(_2) ? _2 : [_2], u3, i3, t3, r3 && d2 !== "foreignObject", o3, f3, o3 ? o3[0] : i3.__k && k(i3, 0), c3), o3 != null)
+      else if (_2 = u3.props.children, w(l3, Array.isArray(_2) ? _2 : [_2], u3, i3, t3, r3 && d3 !== "foreignObject", o3, f3, o3 ? o3[0] : i3.__k && k(i3, 0), c3), o3 != null)
         for (_2 = o3.length; _2--; )
           o3[_2] != null && h(o3[_2]);
-      c3 || ("value" in p2 && (_2 = p2.value) !== void 0 && (_2 !== l3.value || d2 === "progress" && !_2) && H(l3, "value", _2, y3.value, false), "checked" in p2 && (_2 = p2.checked) !== void 0 && _2 !== l3.checked && H(l3, "checked", _2, y3.checked, false));
+      c3 || ("value" in p2 && (_2 = p2.value) !== void 0 && (_2 !== y3.value || _2 !== l3.value || d3 === "progress" && !_2) && H(l3, "value", _2, y3.value, false), "checked" in p2 && (_2 = p2.checked) !== void 0 && _2 !== l3.checked && H(l3, "checked", _2, y3.checked, false));
     }
     return l3;
   }
@@ -348,32 +348,34 @@
     !l.__s && k2(i3.__H, o3) && (i3.__ = r3, i3.__H = o3, u2.__H.__h.push(i3));
   }
   function s2(n2) {
-    return o2 = 5, A(function() {
+    return o2 = 5, d2(function() {
       return { current: n2 };
     }, []);
   }
-  function A(n2, u3) {
+  function d2(n2, u3) {
     var r3 = m2(t2++, 7);
     return k2(r3.__H, u3) && (r3.__ = n2(), r3.__H = u3, r3.__h = n2), r3.__;
   }
-  function F(n2, t3) {
-    return o2 = 8, A(function() {
+  function A(n2, t3) {
+    return o2 = 8, d2(function() {
       return n2;
     }, t3);
   }
   function x2() {
-    i2.forEach(function(t3) {
+    var t3;
+    for (i2.sort(function(n2, t4) {
+      return n2.__v.__b - t4.__v.__b;
+    }); t3 = i2.pop(); )
       if (t3.__P)
         try {
           t3.__H.__h.forEach(g2), t3.__H.__h.forEach(j2), t3.__H.__h = [];
         } catch (u3) {
           t3.__H.__h = [], l.__e(u3, t3.__v);
         }
-    }), i2 = [];
   }
   function g2(n2) {
-    var t3 = u2;
-    typeof n2.__c == "function" && n2.__c(), u2 = t3;
+    var t3 = u2, r3 = n2.__c;
+    typeof r3 == "function" && (n2.__c = void 0, r3()), u2 = t3;
   }
   function j2(n2) {
     var t3 = u2;
@@ -427,25 +429,26 @@
         }), a2 && a2(t3, u3);
       }, l.unmount = function(t3) {
         v2 && v2(t3);
-        var u3 = t3.__c;
-        if (u3 && u3.__H)
+        var u3, r3 = t3.__c;
+        r3 && r3.__H && (r3.__H.__.forEach(function(n2) {
           try {
-            u3.__H.__.forEach(g2);
-          } catch (t4) {
-            l.__e(t4, u3.__v);
+            g2(n2);
+          } catch (n3) {
+            u3 = n3;
           }
+        }), u3 && l.__e(u3, r3.__v));
       };
       b2 = typeof requestAnimationFrame == "function";
     }
   });
 
-  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/b46da21f-f04d-49bf-afa7-a2d7a5b3f147/loading-indicator.js
+  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/41d4f009-2260-43be-99db-71735aeaabe2/loading-indicator.js
   var loading_indicator_default;
   var init_loading_indicator = __esm({
-    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/b46da21f-f04d-49bf-afa7-a2d7a5b3f147/loading-indicator.js"() {
-      if (document.getElementById("38a0789797") === null) {
+    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/41d4f009-2260-43be-99db-71735aeaabe2/loading-indicator.js"() {
+      if (document.getElementById("218be4a6af") === null) {
         const element = document.createElement("style");
-        element.id = "38a0789797";
+        element.id = "218be4a6af";
         element.textContent = `._loadingIndicator_12ibq_1 {
   position: relative;
   width: 16px;
@@ -516,13 +519,13 @@
     }
   });
 
-  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/f71a208e-3380-4ff1-a905-57fb5e287703/button.js
+  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/34249ac5-3887-4da1-9e22-50c4c7ecfd24/button.js
   var button_default;
   var init_button = __esm({
-    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/f71a208e-3380-4ff1-a905-57fb5e287703/button.js"() {
-      if (document.getElementById("a2e2b5f3fc") === null) {
+    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/34249ac5-3887-4da1-9e22-50c4c7ecfd24/button.js"() {
+      if (document.getElementById("96b1aaf0fb") === null) {
         const element = document.createElement("style");
-        element.id = "a2e2b5f3fc";
+        element.id = "96b1aaf0fb";
         element.textContent = `._button_1j1gr_1 {
   position: relative;
   z-index: var(--z-index-1);
@@ -623,7 +626,7 @@
   // node_modules/@create-figma-plugin/ui/lib/components/button/button.js
   function Button(_a) {
     var _b = _a, { children, destructive = false, disabled = false, fullWidth = false, loading = false, onClick, propagateEscapeKeyDown = true, secondary = false } = _b, rest = __objRest(_b, ["children", "destructive", "disabled", "fullWidth", "loading", "onClick", "propagateEscapeKeyDown", "secondary"]);
-    const handleKeyDown = F(function(event) {
+    const handleKeyDown = A(function(event) {
       if (event.key === "Escape") {
         if (propagateEscapeKeyDown === false) {
           event.stopPropagation();
@@ -666,13 +669,13 @@
     }
   });
 
-  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/9394bcfa-0c74-4360-aa8a-f0685f1485e8/container.js
+  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/8b6f61bf-b884-483c-9630-f5a402212886/container.js
   var container_default;
   var init_container = __esm({
-    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/9394bcfa-0c74-4360-aa8a-f0685f1485e8/container.js"() {
-      if (document.getElementById("ba65a26186") === null) {
+    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/8b6f61bf-b884-483c-9630-f5a402212886/container.js"() {
+      if (document.getElementById("24f29b0a88") === null) {
         const element = document.createElement("style");
-        element.id = "ba65a26186";
+        element.id = "24f29b0a88";
         element.textContent = `._extraSmall_kslv9_1 {
   padding: 0 var(--space-extra-small);
 }
@@ -712,13 +715,13 @@
     }
   });
 
-  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/37ce8942-09c8-4b2c-9fff-9ea9e56a1fbb/vertical-space.js
+  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/78e61f91-1705-4a4c-81cb-8f64487c182c/vertical-space.js
   var vertical_space_default;
   var init_vertical_space = __esm({
-    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/37ce8942-09c8-4b2c-9fff-9ea9e56a1fbb/vertical-space.js"() {
-      if (document.getElementById("eb23028374") === null) {
+    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/78e61f91-1705-4a4c-81cb-8f64487c182c/vertical-space.js"() {
+      if (document.getElementById("83c6a4e252") === null) {
         const element = document.createElement("style");
-        element.id = "eb23028374";
+        element.id = "83c6a4e252";
         element.textContent = `._extraSmall_1f9m3_1 {
   height: var(--space-extra-small);
 }
@@ -815,13 +818,13 @@
     }
   });
 
-  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/04dbcef7-7f30-4bb9-9536-5080cfdf5330/textbox-multiline.js
+  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/6ab5496e-2633-4617-afb5-c632c79f62af/textbox-multiline.js
   var textbox_multiline_default;
   var init_textbox_multiline = __esm({
-    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/04dbcef7-7f30-4bb9-9536-5080cfdf5330/textbox-multiline.js"() {
-      if (document.getElementById("684b9d0d2f") === null) {
+    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/6ab5496e-2633-4617-afb5-c632c79f62af/textbox-multiline.js"() {
+      if (document.getElementById("dddd2a8622") === null) {
         const element = document.createElement("style");
-        element.id = "684b9d0d2f";
+        element.id = "dddd2a8622";
         element.textContent = `._textboxMultiline_2dwzn_1 {
   position: relative;
   z-index: var(--z-index-1);
@@ -883,14 +886,14 @@
     const textAreaElementRef = s2(null);
     const isRevertOnEscapeKeyDownRef = s2(false);
     const [originalValue, setOriginalValue] = l2(EMPTY_STRING);
-    const setTextAreaElementValue = F(function(value2) {
+    const setTextAreaElementValue = A(function(value2) {
       const textAreaElement = getCurrentFromRef(textAreaElementRef);
       textAreaElement.value = value2;
       const inputEvent = document.createEvent("Event");
       inputEvent.initEvent("input", true, true);
       textAreaElement.dispatchEvent(inputEvent);
     }, []);
-    const handleBlur = F(function() {
+    const handleBlur = A(function() {
       if (isRevertOnEscapeKeyDownRef.current === true) {
         isRevertOnEscapeKeyDownRef.current = false;
         return;
@@ -912,15 +915,15 @@
       }
       setOriginalValue(EMPTY_STRING);
     }, [originalValue, setTextAreaElementValue, validateOnBlur, value]);
-    const handleFocus = F(function(event) {
+    const handleFocus = A(function(event) {
       setOriginalValue(value);
       event.currentTarget.select();
     }, [value]);
-    const handleInput = F(function(event) {
+    const handleInput = A(function(event) {
       onValueInput(event.currentTarget.value, name);
       onInput(event);
     }, [name, onInput, onValueInput]);
-    const handleKeyDown = F(function(event) {
+    const handleKeyDown = A(function(event) {
       if (event.key === "Escape") {
         if (propagateEscapeKeyDown === false) {
           event.stopPropagation();
@@ -944,7 +947,7 @@
       setTextAreaElementValue,
       value
     ]);
-    const handleMouseUp = F(function(event) {
+    const handleMouseUp = A(function(event) {
       if (value === MIXED_STRING) {
         event.preventDefault();
       }
@@ -1000,12 +1003,12 @@
     }
   });
 
-  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/c3b19ec3-e705-45fe-88fc-281f43f7b2db/base.js
+  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/937e1269-0977-44f7-8d57-e429bc663c2a/base.js
   var init_base = __esm({
-    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/c3b19ec3-e705-45fe-88fc-281f43f7b2db/base.js"() {
-      if (document.getElementById("c584c99600") === null) {
+    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/937e1269-0977-44f7-8d57-e429bc663c2a/base.js"() {
+      if (document.getElementById("172b23f799") === null) {
         const element = document.createElement("style");
-        element.id = "c584c99600";
+        element.id = "172b23f799";
         element.textContent = `@import url('https://fonts.googleapis.com/css?family=Inter:400,600&display=swap');
 
 :root {
@@ -1176,7 +1179,7 @@ svg {
   });
   function Plugin(props) {
     const [text, setText] = l2(props.text);
-    const handleUpdateButtonClick = F(function() {
+    const handleUpdateButtonClick = A(function() {
       emit("UPDATE_TEXT", text);
     }, [text]);
     return /* @__PURE__ */ v(Container, null, /* @__PURE__ */ v(VerticalSpace, {

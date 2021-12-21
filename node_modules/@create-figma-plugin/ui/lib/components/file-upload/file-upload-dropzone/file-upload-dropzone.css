@@ -1,0 +1,40 @@
+.fileUploadDropzone {
+  position: relative;
+  z-index: var(--z-index-1);
+  width: 100%;
+  padding: 32px 0;
+}
+
+.isDropActive {
+  background-color: var(--color-selection-b);
+}
+
+.input,
+.dashedLine {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.input {
+  z-index: var(
+    --z-index-1
+  ); /* stack `.input` over all other elements within `.fileUploadDropzone` */
+  width: 100%;
+  opacity: 0;
+}
+
+.dashedLine {
+  border: 1px dashed var(--color-black-30);
+}
+.input:active ~ .dashedLine,
+.input:focus ~ .dashedLine,
+.isDropActive .dashedLine {
+  border-color: var(--color-accent);
+}
+
+.children {
+  text-align: center;
+}

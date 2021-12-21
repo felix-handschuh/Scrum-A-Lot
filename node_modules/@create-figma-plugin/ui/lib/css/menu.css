@@ -1,0 +1,72 @@
+.menu {
+  position: absolute;
+  left: 0;
+  min-width: 100%;
+  padding: var(--space-extra-small) 0;
+  background-color: var(--color-hud);
+  border-radius: var(--border-radius-2);
+  box-shadow: var(--box-shadow-menu);
+  color: var(--color-white);
+  font-size: var(--font-size-12);
+  overflow-y: auto;
+}
+.menu::-webkit-scrollbar {
+  display: none;
+}
+
+.hidden {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.5),
+  screen and (min-resolution: 1.5dppx) {
+  .menu {
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.optionHeader,
+.optionValue {
+  padding: 4px var(--space-medium) 4px 32px;
+  white-space: nowrap;
+}
+
+.optionHeader {
+  color: var(--color-white-40-translucent);
+  font-size: var(--font-size-12);
+}
+
+.optionValue {
+  position: relative;
+}
+.optionValueSelected {
+  background-color: var(--color-accent);
+}
+.optionValueDisabled {
+  color: var(--color-white-40-translucent);
+}
+
+.optionSeparator {
+  width: 100%;
+  height: 1px;
+  margin: var(--space-extra-small) 0;
+  background-color: var(--color-white-20-translucent);
+}
+
+.input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.checkIcon {
+  position: absolute;
+  top: 5px;
+  left: var(--space-extra-small);
+}

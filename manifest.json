@@ -4,10 +4,13 @@
   "editorType": [
     "figjam"
   ],
-  "permissions": ["activeusers"],
   "containsWidget": true,
   "id": "scrumalot",
   "name": "Scrumalot",
   "main": "build/main.js",
-  "ui": "build/ui.js"
+  "ui": "build/ui.js",
+  "permissions": [
+    "currentuser",
+    "activeusers"
+  ]
 }

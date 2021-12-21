@@ -1,0 +1,45 @@
+.textboxMultiline {
+  position: relative;
+  z-index: var(--z-index-1);
+}
+
+.textarea {
+  display: block;
+  width: 100%;
+  padding: 6px 0 6px var(--space-extra-small);
+  background-color: transparent;
+  border-radius: var(--border-radius-2);
+  color: var(--color-black-80);
+  resize: none;
+}
+.textarea::placeholder {
+  color: var(--color-black-30);
+}
+.disabled .textarea {
+  cursor: not-allowed;
+  opacity: var(--opacity-30);
+}
+
+.border {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-width: 1px;
+  border-color: var(--color-silver);
+  border-radius: var(--border-radius-2);
+  pointer-events: none;
+}
+.textboxMultiline:not(.disabled) .textarea:focus ~ .border {
+  top: -1px;
+  bottom: -1px;
+  border-width: 2px;
+  border-color: var(--color-accent);
+}
+.noBorder .textarea:not(:focus) ~ .border {
+  border-color: transparent;
+}
+.noBorder:not(.disabled) .textarea:not(:focus):hover ~ .border {
+  border-color: var(--color-silver);
+}
