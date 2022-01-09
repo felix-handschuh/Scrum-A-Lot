@@ -100,7 +100,7 @@
         n3.__d && (r3 = (t3 = (l3 = n3).__v).__e, (o3 = l3.__P) && (u3 = [], (i3 = a({}, t3)).__v = t3.__v + 1, j(o3, t3, i3, l3.__n, o3.ownerSVGElement !== void 0, t3.__h != null ? [r3] : null, u3, r3 == null ? k(t3) : r3, t3.__h), z(u3, t3), t3.__e != r3 && b(t3)));
       });
   }
-  function w(n2, l3, u3, i3, t3, r3, o3, f3, s3, a3) {
+  function w(n2, l3, u3, i3, t3, r3, o3, f3, s2, a3) {
     var h2, v3, p2, _2, b3, m3, g3, w3 = i3 && i3.__k || c, A2 = w3.length;
     for (u3.__k = [], h2 = 0; h2 < l3.length; h2++)
       if ((_2 = u3.__k[h2] = (_2 = l3[h2]) == null || typeof _2 == "boolean" ? null : typeof _2 == "string" || typeof _2 == "number" || typeof _2 == "bigint" ? y(null, _2, null, null, _2) : Array.isArray(_2) ? y(d, { children: _2 }, null, null, null) : _2.__b > 0 ? y(_2.type, _2.props, _2.key, null, _2.__v) : _2) != null) {
@@ -114,7 +114,7 @@
             }
             p2 = null;
           }
-        j(n2, _2, p2 = p2 || e, t3, r3, o3, f3, s3, a3), b3 = _2.__e, (v3 = _2.ref) && p2.ref != v3 && (g3 || (g3 = []), p2.ref && g3.push(p2.ref, null, _2), g3.push(v3, _2.__c || b3, _2)), b3 != null ? (m3 == null && (m3 = b3), typeof _2.type == "function" && _2.__k === p2.__k ? _2.__d = s3 = x(_2, s3, n2) : s3 = P(n2, _2, p2, w3, b3, s3), typeof u3.type == "function" && (u3.__d = s3)) : s3 && p2.__e == s3 && s3.parentNode != n2 && (s3 = k(p2));
+        j(n2, _2, p2 = p2 || e, t3, r3, o3, f3, s2, a3), b3 = _2.__e, (v3 = _2.ref) && p2.ref != v3 && (g3 || (g3 = []), p2.ref && g3.push(p2.ref, null, _2), g3.push(v3, _2.__c || b3, _2)), b3 != null ? (m3 == null && (m3 = b3), typeof _2.type == "function" && _2.__k === p2.__k ? _2.__d = s2 = x(_2, s2, n2) : s2 = P(n2, _2, p2, w3, b3, s2), typeof u3.type == "function" && (u3.__d = s2)) : s2 && p2.__e == s2 && s2.parentNode != n2 && (s2 = k(p2));
       }
     for (u3.__e = m3, h2 = A2; h2--; )
       w3[h2] != null && (typeof u3.type == "function" && w3[h2].__e != null && w3[h2].__e == u3.__d && (u3.__d = k(i3, h2 + 1)), N(w3[h2], w3[h2]));
@@ -188,30 +188,30 @@
     this.l[n2.type + true](l.event ? l.event(n2) : n2);
   }
   function j(n2, u3, i3, t3, r3, o3, f3, e3, c3) {
-    var s3, h2, v3, y3, p2, k3, b3, m3, g3, x3, A2, P2 = u3.type;
+    var s2, h2, v3, y2, p2, k3, b3, m3, g3, x3, A2, P2 = u3.type;
     if (u3.constructor !== void 0)
       return null;
-    i3.__h != null && (c3 = i3.__h, e3 = u3.__e = i3.__e, u3.__h = null, o3 = [e3]), (s3 = l.__b) && s3(u3);
+    i3.__h != null && (c3 = i3.__h, e3 = u3.__e = i3.__e, u3.__h = null, o3 = [e3]), (s2 = l.__b) && s2(u3);
     try {
       n:
         if (typeof P2 == "function") {
-          if (m3 = u3.props, g3 = (s3 = P2.contextType) && t3[s3.__c], x3 = s3 ? g3 ? g3.props.value : s3.__ : t3, i3.__c ? b3 = (h2 = u3.__c = i3.__c).__ = h2.__E : ("prototype" in P2 && P2.prototype.render ? u3.__c = h2 = new P2(m3, x3) : (u3.__c = h2 = new _(m3, x3), h2.constructor = P2, h2.render = O), g3 && g3.sub(h2), h2.props = m3, h2.state || (h2.state = {}), h2.context = x3, h2.__n = t3, v3 = h2.__d = true, h2.__h = []), h2.__s == null && (h2.__s = h2.state), P2.getDerivedStateFromProps != null && (h2.__s == h2.state && (h2.__s = a({}, h2.__s)), a(h2.__s, P2.getDerivedStateFromProps(m3, h2.__s))), y3 = h2.props, p2 = h2.state, v3)
+          if (m3 = u3.props, g3 = (s2 = P2.contextType) && t3[s2.__c], x3 = s2 ? g3 ? g3.props.value : s2.__ : t3, i3.__c ? b3 = (h2 = u3.__c = i3.__c).__ = h2.__E : ("prototype" in P2 && P2.prototype.render ? u3.__c = h2 = new P2(m3, x3) : (u3.__c = h2 = new _(m3, x3), h2.constructor = P2, h2.render = O), g3 && g3.sub(h2), h2.props = m3, h2.state || (h2.state = {}), h2.context = x3, h2.__n = t3, v3 = h2.__d = true, h2.__h = []), h2.__s == null && (h2.__s = h2.state), P2.getDerivedStateFromProps != null && (h2.__s == h2.state && (h2.__s = a({}, h2.__s)), a(h2.__s, P2.getDerivedStateFromProps(m3, h2.__s))), y2 = h2.props, p2 = h2.state, v3)
             P2.getDerivedStateFromProps == null && h2.componentWillMount != null && h2.componentWillMount(), h2.componentDidMount != null && h2.__h.push(h2.componentDidMount);
           else {
-            if (P2.getDerivedStateFromProps == null && m3 !== y3 && h2.componentWillReceiveProps != null && h2.componentWillReceiveProps(m3, x3), !h2.__e && h2.shouldComponentUpdate != null && h2.shouldComponentUpdate(m3, h2.__s, x3) === false || u3.__v === i3.__v) {
+            if (P2.getDerivedStateFromProps == null && m3 !== y2 && h2.componentWillReceiveProps != null && h2.componentWillReceiveProps(m3, x3), !h2.__e && h2.shouldComponentUpdate != null && h2.shouldComponentUpdate(m3, h2.__s, x3) === false || u3.__v === i3.__v) {
               h2.props = m3, h2.state = h2.__s, u3.__v !== i3.__v && (h2.__d = false), h2.__v = u3, u3.__e = i3.__e, u3.__k = i3.__k, u3.__k.forEach(function(n3) {
                 n3 && (n3.__ = u3);
               }), h2.__h.length && f3.push(h2);
               break n;
             }
             h2.componentWillUpdate != null && h2.componentWillUpdate(m3, h2.__s, x3), h2.componentDidUpdate != null && h2.__h.push(function() {
-              h2.componentDidUpdate(y3, p2, k3);
+              h2.componentDidUpdate(y2, p2, k3);
             });
           }
-          h2.context = x3, h2.props = m3, h2.state = h2.__s, (s3 = l.__r) && s3(u3), h2.__d = false, h2.__v = u3, h2.__P = n2, s3 = h2.render(h2.props, h2.state, h2.context), h2.state = h2.__s, h2.getChildContext != null && (t3 = a(a({}, t3), h2.getChildContext())), v3 || h2.getSnapshotBeforeUpdate == null || (k3 = h2.getSnapshotBeforeUpdate(y3, p2)), A2 = s3 != null && s3.type === d && s3.key == null ? s3.props.children : s3, w(n2, Array.isArray(A2) ? A2 : [A2], u3, i3, t3, r3, o3, f3, e3, c3), h2.base = u3.__e, u3.__h = null, h2.__h.length && f3.push(h2), b3 && (h2.__E = h2.__ = null), h2.__e = false;
+          h2.context = x3, h2.props = m3, h2.state = h2.__s, (s2 = l.__r) && s2(u3), h2.__d = false, h2.__v = u3, h2.__P = n2, s2 = h2.render(h2.props, h2.state, h2.context), h2.state = h2.__s, h2.getChildContext != null && (t3 = a(a({}, t3), h2.getChildContext())), v3 || h2.getSnapshotBeforeUpdate == null || (k3 = h2.getSnapshotBeforeUpdate(y2, p2)), A2 = s2 != null && s2.type === d && s2.key == null ? s2.props.children : s2, w(n2, Array.isArray(A2) ? A2 : [A2], u3, i3, t3, r3, o3, f3, e3, c3), h2.base = u3.__e, u3.__h = null, h2.__h.length && f3.push(h2), b3 && (h2.__E = h2.__ = null), h2.__e = false;
         } else
           o3 == null && u3.__v === i3.__v ? (u3.__k = i3.__k, u3.__e = i3.__e) : u3.__e = L(i3.__e, u3, i3, t3, r3, o3, f3, c3);
-      (s3 = l.diffed) && s3(u3);
+      (s2 = l.diffed) && s2(u3);
     } catch (n3) {
       u3.__v = null, (c3 || o3 != null) && (u3.__e = e3, u3.__h = !!c3, o3[o3.indexOf(e3)] = null), l.__e(n3, u3, i3);
     }
@@ -228,11 +228,11 @@
     });
   }
   function L(l3, u3, i3, t3, r3, o3, f3, c3) {
-    var s3, a3, v3, y3 = i3.props, p2 = u3.props, d3 = u3.type, _2 = 0;
+    var s2, a3, v3, y2 = i3.props, p2 = u3.props, d3 = u3.type, _2 = 0;
     if (d3 === "svg" && (r3 = true), o3 != null) {
       for (; _2 < o3.length; _2++)
-        if ((s3 = o3[_2]) && "setAttribute" in s3 == !!d3 && (d3 ? s3.localName === d3 : s3.nodeType === 3)) {
-          l3 = s3, o3[_2] = null;
+        if ((s2 = o3[_2]) && "setAttribute" in s2 == !!d3 && (d3 ? s2.localName === d3 : s2.nodeType === 3)) {
+          l3 = s2, o3[_2] = null;
           break;
         }
     }
@@ -242,20 +242,20 @@
       l3 = r3 ? document.createElementNS("http://www.w3.org/2000/svg", d3) : document.createElement(d3, p2.is && p2), o3 = null, c3 = false;
     }
     if (d3 === null)
-      y3 === p2 || c3 && l3.data === p2 || (l3.data = p2);
+      y2 === p2 || c3 && l3.data === p2 || (l3.data = p2);
     else {
-      if (o3 = o3 && n.call(l3.childNodes), a3 = (y3 = i3.props || e).dangerouslySetInnerHTML, v3 = p2.dangerouslySetInnerHTML, !c3) {
+      if (o3 = o3 && n.call(l3.childNodes), a3 = (y2 = i3.props || e).dangerouslySetInnerHTML, v3 = p2.dangerouslySetInnerHTML, !c3) {
         if (o3 != null)
-          for (y3 = {}, _2 = 0; _2 < l3.attributes.length; _2++)
-            y3[l3.attributes[_2].name] = l3.attributes[_2].value;
+          for (y2 = {}, _2 = 0; _2 < l3.attributes.length; _2++)
+            y2[l3.attributes[_2].name] = l3.attributes[_2].value;
         (v3 || a3) && (v3 && (a3 && v3.__html == a3.__html || v3.__html === l3.innerHTML) || (l3.innerHTML = v3 && v3.__html || ""));
       }
-      if (C(l3, p2, y3, r3, c3), v3)
+      if (C(l3, p2, y2, r3, c3), v3)
         u3.__k = [];
       else if (_2 = u3.props.children, w(l3, Array.isArray(_2) ? _2 : [_2], u3, i3, t3, r3 && d3 !== "foreignObject", o3, f3, o3 ? o3[0] : i3.__k && k(i3, 0), c3), o3 != null)
         for (_2 = o3.length; _2--; )
           o3[_2] != null && h(o3[_2]);
-      c3 || ("value" in p2 && (_2 = p2.value) !== void 0 && (_2 !== y3.value || _2 !== l3.value || d3 === "progress" && !_2) && H(l3, "value", _2, y3.value, false), "checked" in p2 && (_2 = p2.checked) !== void 0 && _2 !== l3.checked && H(l3, "checked", _2, y3.checked, false));
+      c3 || ("value" in p2 && (_2 = p2.value) !== void 0 && (_2 !== y2.value || _2 !== l3.value || d3 === "progress" && !_2) && H(l3, "value", _2, y2.value, false), "checked" in p2 && (_2 = p2.checked) !== void 0 && _2 !== l3.checked && H(l3, "checked", _2, y2.checked, false));
     }
     return l3;
   }
@@ -316,14 +316,42 @@
     }
   });
 
-  // node_modules/@create-figma-plugin/ui/lib/utilities/create-class-name.js
-  function createClassName(classNames) {
-    return classNames.filter(function(className) {
-      return className !== null;
-    }).join(" ");
+  // node_modules/@create-figma-plugin/utilities/lib/events.js
+  function invokeEventHandler(name, args) {
+    for (const id in eventHandlers) {
+      if (eventHandlers[id].name === name) {
+        eventHandlers[id].handler.apply(null, args);
+      }
+    }
   }
-  var init_create_class_name = __esm({
-    "node_modules/@create-figma-plugin/ui/lib/utilities/create-class-name.js"() {
+  var eventHandlers, emit;
+  var init_events = __esm({
+    "node_modules/@create-figma-plugin/utilities/lib/events.js"() {
+      eventHandlers = {};
+      emit = typeof window === "undefined" ? function(name, ...args) {
+        figma.ui.postMessage([name, ...args]);
+      } : function(name, ...args) {
+        window.parent.postMessage({
+          pluginMessage: [name, ...args]
+        }, "*");
+      };
+      if (typeof window === "undefined") {
+        figma.ui.onmessage = function([name, ...args]) {
+          invokeEventHandler(name, args);
+        };
+      } else {
+        window.onmessage = function(event) {
+          const [name, ...args] = event.data.pluginMessage;
+          invokeEventHandler(name, args);
+        };
+      }
+    }
+  });
+
+  // node_modules/@create-figma-plugin/utilities/lib/index.js
+  var init_lib = __esm({
+    "node_modules/@create-figma-plugin/utilities/lib/index.js"() {
+      init_events();
     }
   });
 
@@ -342,15 +370,6 @@
       var t3 = i3.t(i3.__[0], n3);
       i3.__[0] !== t3 && (i3.__ = [t3, i3.__[1]], i3.__c.setState({}));
     }], i3.__c = u2), i3.__;
-  }
-  function y2(r3, o3) {
-    var i3 = m2(t2++, 3);
-    !l.__s && k2(i3.__H, o3) && (i3.__ = r3, i3.__H = o3, u2.__H.__h.push(i3));
-  }
-  function s2(n2) {
-    return o2 = 5, d2(function() {
-      return { current: n2 };
-    }, []);
   }
   function d2(n2, u3) {
     var r3 = m2(t2++, 7);
@@ -442,733 +461,784 @@
     }
   });
 
-  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/41d4f009-2260-43be-99db-71735aeaabe2/loading-indicator.js
-  var loading_indicator_default;
-  var init_loading_indicator = __esm({
-    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/41d4f009-2260-43be-99db-71735aeaabe2/loading-indicator.js"() {
-      if (document.getElementById("218be4a6af") === null) {
-        const element = document.createElement("style");
-        element.id = "218be4a6af";
-        element.textContent = `._loadingIndicator_12ibq_1 {
-  position: relative;
-  width: 16px;
-  height: 16px;
-  margin: 0 auto;
-}
-
-._svg_12ibq_8 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 16px;
-  height: 16px;
-  animation: _rotating_12ibq_1 0.5s linear infinite;
-  fill: currentColor;
-}
-._accent_12ibq_17 {
-  fill: var(--color-accent);
-}
-._black-30_12ibq_20 {
-  fill: var(--color-black-30);
-}
-._black-80_12ibq_23 {
-  fill: var(--color-black-80);
-}
-._blue_12ibq_26 {
-  fill: var(--color-blue);
-}
-._white_12ibq_29 {
-  fill: var(--color-white);
-}
-._white-20_12ibq_32 {
-  fill: var(--color-white-20-translucent);
-}
-._white-40_12ibq_35 {
-  fill: var(--color-white-40-translucent);
-}
-
-@keyframes _rotating_12ibq_1 {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm5vZGVfbW9kdWxlcy9AY3JlYXRlLWZpZ21hLXBsdWdpbi91aS9saWIvY29tcG9uZW50cy9sb2FkaW5nLWluZGljYXRvci9sb2FkaW5nLWluZGljYXRvci5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxrQkFBa0I7RUFDbEIsV0FBVztFQUNYLFlBQVk7RUFDWixjQUFjO0FBQ2hCOztBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLE1BQU07RUFDTixPQUFPO0VBQ1AsV0FBVztFQUNYLFlBQVk7RUFDWixpREFBd0M7RUFDeEMsa0JBQWtCO0FBQ3BCO0FBQ0E7RUFDRSx5QkFBeUI7QUFDM0I7QUFDQTtFQUNFLDJCQUEyQjtBQUM3QjtBQUNBO0VBQ0UsMkJBQTJCO0FBQzdCO0FBQ0E7RUFDRSx1QkFBdUI7QUFDekI7QUFDQTtFQUNFLHdCQUF3QjtBQUMxQjtBQUNBO0VBQ0UsdUNBQXVDO0FBQ3pDO0FBQ0E7RUFDRSx1Q0FBdUM7QUFDekM7O0FBRUE7RUFDRTtJQUNFLHVCQUF1QjtFQUN6QjtFQUNBO0lBQ0UseUJBQXlCO0VBQzNCO0FBQ0YiLCJmaWxlIjoibm9kZV9tb2R1bGVzL0BjcmVhdGUtZmlnbWEtcGx1Z2luL3VpL2xpYi9jb21wb25lbnRzL2xvYWRpbmctaW5kaWNhdG9yL2xvYWRpbmctaW5kaWNhdG9yLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5sb2FkaW5nSW5kaWNhdG9yIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICB3aWR0aDogMTZweDtcbiAgaGVpZ2h0OiAxNnB4O1xuICBtYXJnaW46IDAgYXV0bztcbn1cblxuLnN2ZyB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgdG9wOiAwO1xuICBsZWZ0OiAwO1xuICB3aWR0aDogMTZweDtcbiAgaGVpZ2h0OiAxNnB4O1xuICBhbmltYXRpb246IHJvdGF0aW5nIDAuNXMgbGluZWFyIGluZmluaXRlO1xuICBmaWxsOiBjdXJyZW50Q29sb3I7XG59XG4uYWNjZW50IHtcbiAgZmlsbDogdmFyKC0tY29sb3ItYWNjZW50KTtcbn1cbi5ibGFjay0zMCB7XG4gIGZpbGw6IHZhcigtLWNvbG9yLWJsYWNrLTMwKTtcbn1cbi5ibGFjay04MCB7XG4gIGZpbGw6IHZhcigtLWNvbG9yLWJsYWNrLTgwKTtcbn1cbi5ibHVlIHtcbiAgZmlsbDogdmFyKC0tY29sb3ItYmx1ZSk7XG59XG4ud2hpdGUge1xuICBmaWxsOiB2YXIoLS1jb2xvci13aGl0ZSk7XG59XG4ud2hpdGUtMjAge1xuICBmaWxsOiB2YXIoLS1jb2xvci13aGl0ZS0yMC10cmFuc2x1Y2VudCk7XG59XG4ud2hpdGUtNDAge1xuICBmaWxsOiB2YXIoLS1jb2xvci13aGl0ZS00MC10cmFuc2x1Y2VudCk7XG59XG5cbkBrZXlmcmFtZXMgcm90YXRpbmcge1xuICBmcm9tIHtcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSgwZGVnKTtcbiAgfVxuICB0byB7XG4gICAgdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTtcbiAgfVxufVxuIl19 */`;
-        document.head.append(element);
-      }
-      loading_indicator_default = { "loadingIndicator": "_loadingIndicator_12ibq_1", "svg": "_svg_12ibq_8", "rotating": "_rotating_12ibq_1", "accent": "_accent_12ibq_17", "black-30": "_black-30_12ibq_20", "black-80": "_black-80_12ibq_23", "blue": "_blue_12ibq_26", "white": "_white_12ibq_29", "white-20": "_white-20_12ibq_32", "white-40": "_white-40_12ibq_35" };
-    }
-  });
-
-  // node_modules/@create-figma-plugin/ui/lib/components/loading-indicator/loading-indicator.js
-  function LoadingIndicator(_a) {
-    var _b = _a, { color } = _b, rest = __objRest(_b, ["color"]);
-    return v("div", __spreadProps(__spreadValues({}, rest), { class: loading_indicator_default.loadingIndicator }), v("svg", { class: createClassName([
-      loading_indicator_default.svg,
-      typeof color === "undefined" ? null : loading_indicator_default[color]
-    ]) }, v("path", { d: "M8 15C11.866 15 15 11.866 15 8C15 6.7865 14.6912 5.64511 14.1479 4.65013L15.0263 4.17174C15.6471 5.30882 16 6.6132 16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 5.54138 1.10909 3.34181 2.85426 1.8743L3.47761 2.65678C1.96204 3.94081 1 5.85806 1 8C1 11.866 4.13401 15 8 15Z" })));
-  }
-  var init_loading_indicator2 = __esm({
-    "node_modules/@create-figma-plugin/ui/lib/components/loading-indicator/loading-indicator.js"() {
-      init_preact_module();
-      init_create_class_name();
-      init_loading_indicator();
-    }
-  });
-
-  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/34249ac5-3887-4da1-9e22-50c4c7ecfd24/button.js
-  var button_default;
-  var init_button = __esm({
-    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/34249ac5-3887-4da1-9e22-50c4c7ecfd24/button.js"() {
-      if (document.getElementById("96b1aaf0fb") === null) {
-        const element = document.createElement("style");
-        element.id = "96b1aaf0fb";
-        element.textContent = `._button_1j1gr_1 {
-  position: relative;
-  z-index: var(--z-index-1);
-  display: inline-block;
-}
-._button_1j1gr_1 button {
-  display: inline-block;
-  height: 32px;
-  border-radius: var(--border-radius-6);
-  color: currentColor;
-}
-
-._disabled_1j1gr_13 {
-  opacity: var(--opacity-30);
-}
-._disabled_1j1gr_13 button {
-  cursor: not-allowed;
-}
-
-._primary_1j1gr_20 {
-  color: var(
-    --color-white
-  ); /* Set the color of the \`button\` element and \`LoadingIndicator\` */
-}
-._primary_1j1gr_20 button {
-  padding: 0 14px;
-  border: 2px solid transparent;
-  background-color: var(--color-accent);
-  line-height: 28px;
-}
-._primary_1j1gr_20:not(._disabled_1j1gr_13) button:focus {
-  border-color: var(--color-black-30-translucent);
-}
-._primary_1j1gr_20._destructive_1j1gr_34 {
-  color: var(--color-white);
-}
-._primary_1j1gr_20._destructive_1j1gr_34 button {
-  background-color: var(--color-red);
-}
-._primary_1j1gr_20._disabled_1j1gr_13 button {
-  background-color: var(--color-black);
-}
-
-._secondary_1j1gr_44 {
-  color: var(--color-black-80);
-}
-._secondary_1j1gr_44 button {
-  padding: 0 15px;
-  border: 1px solid var(--color-black-80);
-  background-color: transparent;
-  line-height: 30px;
-}
-._secondary_1j1gr_44:not(._disabled_1j1gr_13) button:focus {
-  padding: 0 14px;
-  border-width: 2px;
-  border-color: var(--color-accent);
-  line-height: 28px;
-}
-._secondary_1j1gr_44._destructive_1j1gr_34 {
-  color: var(--color-red);
-}
-._secondary_1j1gr_44._destructive_1j1gr_34 button {
-  border-color: var(--color-red);
-}
-._secondary_1j1gr_44._destructive_1j1gr_34:not(._disabled_1j1gr_13) button:focus {
-  border-color: var(--color-red);
-}
-
-._fullWidth_1j1gr_69 {
-  display: block;
-}
-._fullWidth_1j1gr_69 button {
-  display: block;
-  overflow: hidden;
-  width: 100%;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-._loading_1j1gr_80 button {
-  color: rgba(0, 0, 0, 0); /* Hide the button text */
-}
-._loadingIndicator_1j1gr_83 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-}
-
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm5vZGVfbW9kdWxlcy9AY3JlYXRlLWZpZ21hLXBsdWdpbi91aS9saWIvY29tcG9uZW50cy9idXR0b24vYnV0dG9uLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGtCQUFrQjtFQUNsQix5QkFBeUI7RUFDekIscUJBQXFCO0FBQ3ZCO0FBQ0E7RUFDRSxxQkFBcUI7RUFDckIsWUFBWTtFQUNaLHFDQUFxQztFQUNyQyxtQkFBbUI7QUFDckI7O0FBRUE7RUFDRSwwQkFBMEI7QUFDNUI7QUFDQTtFQUNFLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFOztHQUVDLEVBQUUsaUVBQWlFO0FBQ3RFO0FBQ0E7RUFDRSxlQUFlO0VBQ2YsNkJBQTZCO0VBQzdCLHFDQUFxQztFQUNyQyxpQkFBaUI7QUFDbkI7QUFDQTtFQUNFLCtDQUErQztBQUNqRDtBQUNBO0VBQ0UseUJBQXlCO0FBQzNCO0FBQ0E7RUFDRSxrQ0FBa0M7QUFDcEM7QUFDQTtFQUNFLG9DQUFvQztBQUN0Qzs7QUFFQTtFQUNFLDRCQUE0QjtBQUM5QjtBQUNBO0VBQ0UsZUFBZTtFQUNmLHVDQUF1QztFQUN2Qyw2QkFBNkI7RUFDN0IsaUJBQWlCO0FBQ25CO0FBQ0E7RUFDRSxlQUFlO0VBQ2YsaUJBQWlCO0VBQ2pCLGlDQUFpQztFQUNqQyxpQkFBaUI7QUFDbkI7QUFDQTtFQUNFLHVCQUF1QjtBQUN6QjtBQUNBO0VBQ0UsOEJBQThCO0FBQ2hDO0FBQ0E7RUFDRSw4QkFBOEI7QUFDaEM7O0FBRUE7RUFDRSxjQUFjO0FBQ2hCO0FBQ0E7RUFDRSxjQUFjO0VBQ2QsZ0JBQWdCO0VBQ2hCLFdBQVc7RUFDWCx1QkFBdUI7RUFDdkIsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0UsdUJBQXVCLEVBQUUseUJBQXlCO0FBQ3BEO0FBQ0E7RUFDRSxrQkFBa0I7RUFDbEIsUUFBUTtFQUNSLFNBQVM7RUFDVCxvQkFBb0I7RUFDcEIsZ0NBQWdDO0FBQ2xDIiwiZmlsZSI6Im5vZGVfbW9kdWxlcy9AY3JlYXRlLWZpZ21hLXBsdWdpbi91aS9saWIvY29tcG9uZW50cy9idXR0b24vYnV0dG9uLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5idXR0b24ge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIHotaW5kZXg6IHZhcigtLXotaW5kZXgtMSk7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbn1cbi5idXR0b24gYnV0dG9uIHtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICBoZWlnaHQ6IDMycHg7XG4gIGJvcmRlci1yYWRpdXM6IHZhcigtLWJvcmRlci1yYWRpdXMtNik7XG4gIGNvbG9yOiBjdXJyZW50Q29sb3I7XG59XG5cbi5kaXNhYmxlZCB7XG4gIG9wYWNpdHk6IHZhcigtLW9wYWNpdHktMzApO1xufVxuLmRpc2FibGVkIGJ1dHRvbiB7XG4gIGN1cnNvcjogbm90LWFsbG93ZWQ7XG59XG5cbi5wcmltYXJ5IHtcbiAgY29sb3I6IHZhcihcbiAgICAtLWNvbG9yLXdoaXRlXG4gICk7IC8qIFNldCB0aGUgY29sb3Igb2YgdGhlIGBidXR0b25gIGVsZW1lbnQgYW5kIGBMb2FkaW5nSW5kaWNhdG9yYCAqL1xufVxuLnByaW1hcnkgYnV0dG9uIHtcbiAgcGFkZGluZzogMCAxNHB4O1xuICBib3JkZXI6IDJweCBzb2xpZCB0cmFuc3BhcmVudDtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tY29sb3ItYWNjZW50KTtcbiAgbGluZS1oZWlnaHQ6IDI4cHg7XG59XG4ucHJpbWFyeTpub3QoLmRpc2FibGVkKSBidXR0b246Zm9jdXMge1xuICBib3JkZXItY29sb3I6IHZhcigtLWNvbG9yLWJsYWNrLTMwLXRyYW5zbHVjZW50KTtcbn1cbi5wcmltYXJ5LmRlc3RydWN0aXZlIHtcbiAgY29sb3I6IHZhcigtLWNvbG9yLXdoaXRlKTtcbn1cbi5wcmltYXJ5LmRlc3RydWN0aXZlIGJ1dHRvbiB7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWNvbG9yLXJlZCk7XG59XG4ucHJpbWFyeS5kaXNhYmxlZCBidXR0b24ge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1jb2xvci1ibGFjayk7XG59XG5cbi5zZWNvbmRhcnkge1xuICBjb2xvcjogdmFyKC0tY29sb3ItYmxhY2stODApO1xufVxuLnNlY29uZGFyeSBidXR0b24ge1xuICBwYWRkaW5nOiAwIDE1cHg7XG4gIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWNvbG9yLWJsYWNrLTgwKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XG4gIGxpbmUtaGVpZ2h0OiAzMHB4O1xufVxuLnNlY29uZGFyeTpub3QoLmRpc2FibGVkKSBidXR0b246Zm9jdXMge1xuICBwYWRkaW5nOiAwIDE0cHg7XG4gIGJvcmRlci13aWR0aDogMnB4O1xuICBib3JkZXItY29sb3I6IHZhcigtLWNvbG9yLWFjY2VudCk7XG4gIGxpbmUtaGVpZ2h0OiAyOHB4O1xufVxuLnNlY29uZGFyeS5kZXN0cnVjdGl2ZSB7XG4gIGNvbG9yOiB2YXIoLS1jb2xvci1yZWQpO1xufVxuLnNlY29uZGFyeS5kZXN0cnVjdGl2ZSBidXR0b24ge1xuICBib3JkZXItY29sb3I6IHZhcigtLWNvbG9yLXJlZCk7XG59XG4uc2Vjb25kYXJ5LmRlc3RydWN0aXZlOm5vdCguZGlzYWJsZWQpIGJ1dHRvbjpmb2N1cyB7XG4gIGJvcmRlci1jb2xvcjogdmFyKC0tY29sb3ItcmVkKTtcbn1cblxuLmZ1bGxXaWR0aCB7XG4gIGRpc3BsYXk6IGJsb2NrO1xufVxuLmZ1bGxXaWR0aCBidXR0b24ge1xuICBkaXNwbGF5OiBibG9jaztcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgd2lkdGg6IDEwMCU7XG4gIHRleHQtb3ZlcmZsb3c6IGVsbGlwc2lzO1xuICB3aGl0ZS1zcGFjZTogbm93cmFwO1xufVxuXG4ubG9hZGluZyBidXR0b24ge1xuICBjb2xvcjogcmdiYSgwLCAwLCAwLCAwKTsgLyogSGlkZSB0aGUgYnV0dG9uIHRleHQgKi9cbn1cbi5sb2FkaW5nSW5kaWNhdG9yIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0b3A6IDUwJTtcbiAgbGVmdDogNTAlO1xuICBwb2ludGVyLWV2ZW50czogbm9uZTtcbiAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XG59XG4iXX0= */`;
-        document.head.append(element);
-      }
-      button_default = { "button": "_button_1j1gr_1", "disabled": "_disabled_1j1gr_13", "primary": "_primary_1j1gr_20", "destructive": "_destructive_1j1gr_34", "secondary": "_secondary_1j1gr_44", "fullWidth": "_fullWidth_1j1gr_69", "loading": "_loading_1j1gr_80", "loadingIndicator": "_loadingIndicator_1j1gr_83" };
-    }
-  });
-
-  // node_modules/@create-figma-plugin/ui/lib/components/button/button.js
-  function Button(_a) {
-    var _b = _a, { children, destructive = false, disabled = false, fullWidth = false, loading = false, onClick, propagateEscapeKeyDown = true, secondary = false } = _b, rest = __objRest(_b, ["children", "destructive", "disabled", "fullWidth", "loading", "onClick", "propagateEscapeKeyDown", "secondary"]);
-    const handleKeyDown = A(function(event) {
-      if (event.key === "Escape") {
-        if (propagateEscapeKeyDown === false) {
-          event.stopPropagation();
-        }
-        event.currentTarget.blur();
-        return;
-      }
-      if (event.key === "Enter") {
-        event.stopPropagation();
-      }
-    }, [propagateEscapeKeyDown]);
-    return v("div", { class: createClassName([
-      button_default.button,
-      secondary === true ? button_default.secondary : button_default.primary,
-      destructive === true ? button_default.destructive : null,
-      fullWidth === true ? button_default.fullWidth : null,
-      disabled === true ? button_default.disabled : null,
-      loading === true ? button_default.loading : null
-    ]) }, loading === true ? v("div", { class: button_default.loadingIndicator }, v(LoadingIndicator, null)) : null, v("button", __spreadProps(__spreadValues({}, rest), { disabled: disabled === true, onClick: disabled === true || loading === true ? void 0 : onClick, onKeyDown: disabled === true || loading === true ? void 0 : handleKeyDown, tabIndex: disabled === true ? -1 : 0 }), children));
-  }
-  var init_button2 = __esm({
-    "node_modules/@create-figma-plugin/ui/lib/components/button/button.js"() {
-      init_preact_module();
-      init_hooks_module();
-      init_create_class_name();
-      init_loading_indicator2();
-      init_button();
-    }
-  });
-
-  // node_modules/@create-figma-plugin/ui/lib/utilities/get-current-from-ref.js
-  function getCurrentFromRef(ref) {
-    if (ref.current === null) {
-      throw new Error("`ref.current` is `undefined`");
-    }
-    return ref.current;
-  }
-  var init_get_current_from_ref = __esm({
-    "node_modules/@create-figma-plugin/ui/lib/utilities/get-current-from-ref.js"() {
-    }
-  });
-
-  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/8b6f61bf-b884-483c-9630-f5a402212886/container.js
+  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/1b05c11a-a464-4e05-8bbd-835f34fcb290/container.js
   var container_default;
   var init_container = __esm({
-    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/8b6f61bf-b884-483c-9630-f5a402212886/container.js"() {
-      if (document.getElementById("24f29b0a88") === null) {
+    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/1b05c11a-a464-4e05-8bbd-835f34fcb290/container.js"() {
+      if (document.getElementById("2da5ba188e") === null) {
         const element = document.createElement("style");
-        element.id = "24f29b0a88";
-        element.textContent = `._extraSmall_kslv9_1 {
-  padding: 0 var(--space-extra-small);
+        element.id = "2da5ba188e";
+        element.textContent = `
+._column_yp7iz_2 {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--spaced-by);
 }
 
-._small_kslv9_5 {
-  padding: 0 var(--space-small);
+._column_yp7iz_2 > * {
+    align-self: flex-start;
 }
 
-._medium_kslv9_9 {
-  padding: 0 var(--space-medium);
+._row_yp7iz_12 {
+    display: flex;
+    flex-direction: row;
+    column-gap: var(--spaced-by);
 }
 
-._large_kslv9_13 {
-  padding: 0 var(--space-large);
+._row_yp7iz_12 > * {
+    align-self: flex-start;
 }
 
-._extraLarge_kslv9_17 {
-  padding: 0 var(--space-extra-large);
+._box_yp7iz_22 {
+    display: grid;
 }
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm5vZGVfbW9kdWxlcy9AY3JlYXRlLWZpZ21hLXBsdWdpbi91aS9saWIvY29tcG9uZW50cy9sYXlvdXQvY29udGFpbmVyL2NvbnRhaW5lci5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxtQ0FBbUM7QUFDckM7O0FBRUE7RUFDRSw2QkFBNkI7QUFDL0I7O0FBRUE7RUFDRSw4QkFBOEI7QUFDaEM7O0FBRUE7RUFDRSw2QkFBNkI7QUFDL0I7O0FBRUE7RUFDRSxtQ0FBbUM7QUFDckMiLCJmaWxlIjoibm9kZV9tb2R1bGVzL0BjcmVhdGUtZmlnbWEtcGx1Z2luL3VpL2xpYi9jb21wb25lbnRzL2xheW91dC9jb250YWluZXIvY29udGFpbmVyLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5leHRyYVNtYWxsIHtcbiAgcGFkZGluZzogMCB2YXIoLS1zcGFjZS1leHRyYS1zbWFsbCk7XG59XG5cbi5zbWFsbCB7XG4gIHBhZGRpbmc6IDAgdmFyKC0tc3BhY2Utc21hbGwpO1xufVxuXG4ubWVkaXVtIHtcbiAgcGFkZGluZzogMCB2YXIoLS1zcGFjZS1tZWRpdW0pO1xufVxuXG4ubGFyZ2Uge1xuICBwYWRkaW5nOiAwIHZhcigtLXNwYWNlLWxhcmdlKTtcbn1cblxuLmV4dHJhTGFyZ2Uge1xuICBwYWRkaW5nOiAwIHZhcigtLXNwYWNlLWV4dHJhLWxhcmdlKTtcbn1cbiJdfQ== */`;
+._fitParent_yp7iz_26 {
+    width: 100%;
+    height: 100%;
+}
+
+._box_yp7iz_22 > * {
+    place-self: start;
+}
+
+._column_yp7iz_2 > ._alignStart_yp7iz_35 {
+    align-self: flex-start;
+}
+
+._column_yp7iz_2 > ._alignEnd_yp7iz_39 {
+    align-self: flex-end;
+}
+
+._column_yp7iz_2 > ._alignCenter_yp7iz_43 {
+    align-self: center;
+}
+
+._column_yp7iz_2 > ._alignFill_yp7iz_47 {
+    align-self: stretch;
+}
+
+._row_yp7iz_12 > ._alignStart_yp7iz_35 {
+    align-self: flex-start;
+}
+
+._row_yp7iz_12 > ._alignEnd_yp7iz_39 {
+    align-self: flex-end;
+}
+
+._row_yp7iz_12 > ._alignCenter_yp7iz_43 {
+    align-self: center;
+}
+
+._row_yp7iz_12 > ._alignFill_yp7iz_47 {
+    align-self: stretch;
+}
+
+._box_yp7iz_22 > ._alignStart_yp7iz_35 {
+    place-self: center start;
+}
+
+._box_yp7iz_22 > ._alignEnd_yp7iz_39 {
+    place-self: center end;
+}
+
+._box_yp7iz_22 > ._alignCenter_yp7iz_43 {
+    place-self: center;
+}
+
+._box_yp7iz_22 > ._alignFill_yp7iz_47 {
+    place-self: stretch;
+}
+
+._box_yp7iz_22 > ._alignTopStart_yp7iz_83 {
+    place-self: start;
+}
+
+._box_yp7iz_22 > ._alignTopCenter_yp7iz_87 {
+    place-self: start center;
+}
+
+._box_yp7iz_22 > ._alignTopEnd_yp7iz_91 {
+    place-self: start end;
+}
+
+._box_yp7iz_22 > ._alignBottomStart_yp7iz_95 {
+    place-self: end start;
+}
+
+._box_yp7iz_22 > ._alignBottomCenter_yp7iz_99 {
+    place-self: end center;
+}
+
+._box_yp7iz_22 > ._alignBottomEnd_yp7iz_103 {
+    place-self: end;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9jb21wb25lbnRzL2NvbnRhaW5lci5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBO0lBQ0ksYUFBYTtJQUNiLHNCQUFzQjtJQUN0Qix5QkFBeUI7QUFDN0I7O0FBRUE7SUFDSSxzQkFBc0I7QUFDMUI7O0FBRUE7SUFDSSxhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLDRCQUE0QjtBQUNoQzs7QUFFQTtJQUNJLHNCQUFzQjtBQUMxQjs7QUFFQTtJQUNJLGFBQWE7QUFDakI7O0FBRUE7SUFDSSxXQUFXO0lBQ1gsWUFBWTtBQUNoQjs7QUFFQTtJQUNJLGlCQUFpQjtBQUNyQjs7QUFFQTtJQUNJLHNCQUFzQjtBQUMxQjs7QUFFQTtJQUNJLG9CQUFvQjtBQUN4Qjs7QUFFQTtJQUNJLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLG1CQUFtQjtBQUN2Qjs7QUFFQTtJQUNJLHNCQUFzQjtBQUMxQjs7QUFFQTtJQUNJLG9CQUFvQjtBQUN4Qjs7QUFFQTtJQUNJLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLG1CQUFtQjtBQUN2Qjs7QUFFQTtJQUNJLHdCQUF3QjtBQUM1Qjs7QUFFQTtJQUNJLHNCQUFzQjtBQUMxQjs7QUFFQTtJQUNJLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLG1CQUFtQjtBQUN2Qjs7QUFFQTtJQUNJLGlCQUFpQjtBQUNyQjs7QUFFQTtJQUNJLHdCQUF3QjtBQUM1Qjs7QUFFQTtJQUNJLHFCQUFxQjtBQUN6Qjs7QUFFQTtJQUNJLHFCQUFxQjtBQUN6Qjs7QUFFQTtJQUNJLHNCQUFzQjtBQUMxQjs7QUFFQTtJQUNJLGVBQWU7QUFDbkIiLCJmaWxlIjoic3JjL2NvbXBvbmVudHMvY29udGFpbmVyLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuLmNvbHVtbiB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIHJvdy1nYXA6IHZhcigtLXNwYWNlZC1ieSk7XG59XG5cbi5jb2x1bW4gPiAqIHtcbiAgICBhbGlnbi1zZWxmOiBmbGV4LXN0YXJ0O1xufVxuXG4ucm93IHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGZsZXgtZGlyZWN0aW9uOiByb3c7XG4gICAgY29sdW1uLWdhcDogdmFyKC0tc3BhY2VkLWJ5KTtcbn1cblxuLnJvdyA+ICoge1xuICAgIGFsaWduLXNlbGY6IGZsZXgtc3RhcnQ7XG59XG5cbi5ib3gge1xuICAgIGRpc3BsYXk6IGdyaWQ7XG59XG5cbi5maXRQYXJlbnQge1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGhlaWdodDogMTAwJTtcbn1cblxuLmJveCA+ICoge1xuICAgIHBsYWNlLXNlbGY6IHN0YXJ0O1xufVxuXG4uY29sdW1uID4gLmFsaWduU3RhcnQge1xuICAgIGFsaWduLXNlbGY6IGZsZXgtc3RhcnQ7XG59XG5cbi5jb2x1bW4gPiAuYWxpZ25FbmQge1xuICAgIGFsaWduLXNlbGY6IGZsZXgtZW5kO1xufVxuXG4uY29sdW1uID4gLmFsaWduQ2VudGVyIHtcbiAgICBhbGlnbi1zZWxmOiBjZW50ZXI7XG59XG5cbi5jb2x1bW4gPiAuYWxpZ25GaWxsIHtcbiAgICBhbGlnbi1zZWxmOiBzdHJldGNoO1xufVxuXG4ucm93ID4gLmFsaWduU3RhcnQge1xuICAgIGFsaWduLXNlbGY6IGZsZXgtc3RhcnQ7XG59XG5cbi5yb3cgPiAuYWxpZ25FbmQge1xuICAgIGFsaWduLXNlbGY6IGZsZXgtZW5kO1xufVxuXG4ucm93ID4gLmFsaWduQ2VudGVyIHtcbiAgICBhbGlnbi1zZWxmOiBjZW50ZXI7XG59XG5cbi5yb3cgPiAuYWxpZ25GaWxsIHtcbiAgICBhbGlnbi1zZWxmOiBzdHJldGNoO1xufVxuXG4uYm94ID4gLmFsaWduU3RhcnQge1xuICAgIHBsYWNlLXNlbGY6IGNlbnRlciBzdGFydDtcbn1cblxuLmJveCA+IC5hbGlnbkVuZCB7XG4gICAgcGxhY2Utc2VsZjogY2VudGVyIGVuZDtcbn1cblxuLmJveCA+IC5hbGlnbkNlbnRlciB7XG4gICAgcGxhY2Utc2VsZjogY2VudGVyO1xufVxuXG4uYm94ID4gLmFsaWduRmlsbCB7XG4gICAgcGxhY2Utc2VsZjogc3RyZXRjaDtcbn1cblxuLmJveCA+IC5hbGlnblRvcFN0YXJ0IHtcbiAgICBwbGFjZS1zZWxmOiBzdGFydDtcbn1cblxuLmJveCA+IC5hbGlnblRvcENlbnRlciB7XG4gICAgcGxhY2Utc2VsZjogc3RhcnQgY2VudGVyO1xufVxuXG4uYm94ID4gLmFsaWduVG9wRW5kIHtcbiAgICBwbGFjZS1zZWxmOiBzdGFydCBlbmQ7XG59XG5cbi5ib3ggPiAuYWxpZ25Cb3R0b21TdGFydCB7XG4gICAgcGxhY2Utc2VsZjogZW5kIHN0YXJ0O1xufVxuXG4uYm94ID4gLmFsaWduQm90dG9tQ2VudGVyIHtcbiAgICBwbGFjZS1zZWxmOiBlbmQgY2VudGVyO1xufVxuXG4uYm94ID4gLmFsaWduQm90dG9tRW5kIHtcbiAgICBwbGFjZS1zZWxmOiBlbmQ7XG59XG4iXX0= */`;
         document.head.append(element);
       }
-      container_default = { "extraSmall": "_extraSmall_kslv9_1", "small": "_small_kslv9_5", "medium": "_medium_kslv9_9", "large": "_large_kslv9_13", "extraLarge": "_extraLarge_kslv9_17" };
+      container_default = { "column": "_column_yp7iz_2", "row": "_row_yp7iz_12", "box": "_box_yp7iz_22", "fitParent": "_fitParent_yp7iz_26", "alignStart": "_alignStart_yp7iz_35", "alignEnd": "_alignEnd_yp7iz_39", "alignCenter": "_alignCenter_yp7iz_43", "alignFill": "_alignFill_yp7iz_47", "alignTopStart": "_alignTopStart_yp7iz_83", "alignTopCenter": "_alignTopCenter_yp7iz_87", "alignTopEnd": "_alignTopEnd_yp7iz_91", "alignBottomStart": "_alignBottomStart_yp7iz_95", "alignBottomCenter": "_alignBottomCenter_yp7iz_99", "alignBottomEnd": "_alignBottomEnd_yp7iz_103" };
     }
   });
 
-  // node_modules/@create-figma-plugin/ui/lib/components/layout/container/container.js
-  function Container(_a) {
-    var _b = _a, { space = "small" } = _b, rest = __objRest(_b, ["space"]);
-    return v("div", __spreadProps(__spreadValues({}, rest), { class: container_default[space] }));
+  // src/components/composeFunctions.tsx
+  function composeClasses(...classes) {
+    return classes.filter((c3) => c3 !== void 0).join(" ");
   }
-  var init_container2 = __esm({
-    "node_modules/@create-figma-plugin/ui/lib/components/layout/container/container.js"() {
-      init_preact_module();
+  function alignClass(alignment) {
+    switch (alignment) {
+      case "center":
+        return container_default.alignCenter;
+      case "fill":
+        return container_default.alignFill;
+      case "end":
+        return container_default.alignEnd;
+      case "start":
+        return container_default.alignStart;
+      case "topStart":
+        return container_default.alignTopStart;
+      case "topCenter":
+        return container_default.alignTopCenter;
+      case "topEnd":
+        return container_default.alignTopEnd;
+      case "bottomStart":
+        return container_default.alignBottomStart;
+      case "bottomCenter":
+        return container_default.alignBottomCenter;
+      case "bottomEnd":
+        return container_default.alignBottomEnd;
+      default:
+        return container_default.alignStart;
+    }
+  }
+  function composeProperties(...props) {
+    return props.filter(([p2, v3]) => v3 !== void 0).map(([p2, v3]) => `--${p2}: ${v3};`).join(" ");
+  }
+  function composePaddingAsProperties(padding) {
+    if (padding === void 0) {
+      return composeProperties(["padding-top", "0"], ["padding-bottom", "0"], ["padding-start", "0"], ["padding-end", "0"]);
+    }
+    if ("top" in padding) {
+      return composeProperties(["padding-top", padding.top], ["padding-bottom", padding.bottom], ["padding-start", padding.start], ["padding-end", padding.end]);
+    } else if ("horizontal" in padding) {
+      return composeProperties(["padding-top", padding.vertical], ["padding-bottom", padding.vertical], ["padding-start", padding.horizontal], ["padding-end", padding.horizontal]);
+    } else {
+      return composeProperties(["padding-top", padding.all], ["padding-bottom", padding.all], ["padding-start", padding.all], ["padding-end", padding.all]);
+    }
+  }
+  function composeSizeAsProperties(width, height) {
+    return composeProperties(["height", height != null ? height : "unset"], ["width", width != null ? width : "unset"]);
+  }
+  function composeColorAsProperties(color) {
+    if (color === void 0) {
+      return "";
+    }
+    return composeProperties(["content-color", color.content], ["background-color", color.background]);
+  }
+  var init_composeFunctions = __esm({
+    "src/components/composeFunctions.tsx"() {
       init_container();
     }
   });
 
-  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/78e61f91-1705-4a4c-81cb-8f64487c182c/vertical-space.js
-  var vertical_space_default;
-  var init_vertical_space = __esm({
-    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/78e61f91-1705-4a4c-81cb-8f64487c182c/vertical-space.js"() {
-      if (document.getElementById("83c6a4e252") === null) {
-        const element = document.createElement("style");
-        element.id = "83c6a4e252";
-        element.textContent = `._extraSmall_1f9m3_1 {
-  height: var(--space-extra-small);
-}
-
-._small_1f9m3_5 {
-  height: var(--space-small);
-}
-
-._medium_1f9m3_9 {
-  height: var(--space-medium);
-}
-
-._large_1f9m3_13 {
-  height: var(--space-large);
-}
-
-._extraLarge_1f9m3_17 {
-  height: var(--space-extra-large);
-}
-
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm5vZGVfbW9kdWxlcy9AY3JlYXRlLWZpZ21hLXBsdWdpbi91aS9saWIvY29tcG9uZW50cy9sYXlvdXQvdmVydGljYWwtc3BhY2UvdmVydGljYWwtc3BhY2UuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZ0NBQWdDO0FBQ2xDOztBQUVBO0VBQ0UsMEJBQTBCO0FBQzVCOztBQUVBO0VBQ0UsMkJBQTJCO0FBQzdCOztBQUVBO0VBQ0UsMEJBQTBCO0FBQzVCOztBQUVBO0VBQ0UsZ0NBQWdDO0FBQ2xDIiwiZmlsZSI6Im5vZGVfbW9kdWxlcy9AY3JlYXRlLWZpZ21hLXBsdWdpbi91aS9saWIvY29tcG9uZW50cy9sYXlvdXQvdmVydGljYWwtc3BhY2UvdmVydGljYWwtc3BhY2UuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmV4dHJhU21hbGwge1xuICBoZWlnaHQ6IHZhcigtLXNwYWNlLWV4dHJhLXNtYWxsKTtcbn1cblxuLnNtYWxsIHtcbiAgaGVpZ2h0OiB2YXIoLS1zcGFjZS1zbWFsbCk7XG59XG5cbi5tZWRpdW0ge1xuICBoZWlnaHQ6IHZhcigtLXNwYWNlLW1lZGl1bSk7XG59XG5cbi5sYXJnZSB7XG4gIGhlaWdodDogdmFyKC0tc3BhY2UtbGFyZ2UpO1xufVxuXG4uZXh0cmFMYXJnZSB7XG4gIGhlaWdodDogdmFyKC0tc3BhY2UtZXh0cmEtbGFyZ2UpO1xufVxuIl19 */`;
-        document.head.append(element);
-      }
-      vertical_space_default = { "extraSmall": "_extraSmall_1f9m3_1", "small": "_small_1f9m3_5", "medium": "_medium_1f9m3_9", "large": "_large_1f9m3_13", "extraLarge": "_extraLarge_1f9m3_17" };
-    }
-  });
-
-  // node_modules/@create-figma-plugin/ui/lib/components/layout/vertical-space/vertical-space.js
-  function VerticalSpace(_a) {
-    var _b = _a, { space = "small" } = _b, rest = __objRest(_b, ["space"]);
-    return v("div", __spreadProps(__spreadValues({}, rest), { class: vertical_space_default[space] }));
-  }
-  var init_vertical_space2 = __esm({
-    "node_modules/@create-figma-plugin/ui/lib/components/layout/vertical-space/vertical-space.js"() {
-      init_preact_module();
-      init_vertical_space();
-    }
-  });
-
-  // node_modules/@create-figma-plugin/utilities/lib/events.js
-  function invokeEventHandler(name, args) {
-    for (const id in eventHandlers) {
-      if (eventHandlers[id].name === name) {
-        eventHandlers[id].handler.apply(null, args);
-      }
-    }
-  }
-  var eventHandlers, emit;
-  var init_events = __esm({
-    "node_modules/@create-figma-plugin/utilities/lib/events.js"() {
-      eventHandlers = {};
-      emit = typeof window === "undefined" ? function(name, ...args) {
-        figma.ui.postMessage([name, ...args]);
-      } : function(name, ...args) {
-        window.parent.postMessage({
-          pluginMessage: [name, ...args]
-        }, "*");
-      };
-      if (typeof window === "undefined") {
-        figma.ui.onmessage = function([name, ...args]) {
-          invokeEventHandler(name, args);
-        };
-      } else {
-        window.onmessage = function(event) {
-          const [name, ...args] = event.data.pluginMessage;
-          invokeEventHandler(name, args);
-        };
-      }
-    }
-  });
-
-  // node_modules/@create-figma-plugin/utilities/lib/mixed-values.js
-  var MIXED_STRING;
-  var init_mixed_values = __esm({
-    "node_modules/@create-figma-plugin/utilities/lib/mixed-values.js"() {
-      MIXED_STRING = "999999999999999";
-    }
-  });
-
-  // node_modules/@create-figma-plugin/utilities/lib/index.js
-  var init_lib = __esm({
-    "node_modules/@create-figma-plugin/utilities/lib/index.js"() {
-      init_events();
-      init_mixed_values();
-    }
-  });
-
-  // node_modules/@create-figma-plugin/ui/lib/components/textbox/private/is-keycode-character-generating.js
-  function isKeyCodeCharacterGenerating(keyCode) {
-    return keyCode === 32 || keyCode >= 48 && keyCode <= 57 || keyCode >= 65 && keyCode <= 90 || keyCode >= 96 && keyCode <= 105 || keyCode >= 186 && keyCode <= 192 || keyCode >= 219 && keyCode <= 222;
-  }
-  var init_is_keycode_character_generating = __esm({
-    "node_modules/@create-figma-plugin/ui/lib/components/textbox/private/is-keycode-character-generating.js"() {
-    }
-  });
-
-  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/6ab5496e-2633-4617-afb5-c632c79f62af/textbox-multiline.js
-  var textbox_multiline_default;
-  var init_textbox_multiline = __esm({
-    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/6ab5496e-2633-4617-afb5-c632c79f62af/textbox-multiline.js"() {
-      if (document.getElementById("dddd2a8622") === null) {
-        const element = document.createElement("style");
-        element.id = "dddd2a8622";
-        element.textContent = `._textboxMultiline_2dwzn_1 {
-  position: relative;
-  z-index: var(--z-index-1);
-}
-
-._textarea_2dwzn_6 {
-  display: block;
-  width: 100%;
-  padding: 6px 0 6px var(--space-extra-small);
-  background-color: transparent;
-  border-radius: var(--border-radius-2);
-  color: var(--color-black-80);
-  resize: none;
-}
-._textarea_2dwzn_6::placeholder {
-  color: var(--color-black-30);
-}
-._disabled_2dwzn_18 ._textarea_2dwzn_6 {
-  cursor: not-allowed;
-  opacity: var(--opacity-30);
-}
-
-._border_2dwzn_23 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-width: 1px;
-  border-color: var(--color-silver);
-  border-radius: var(--border-radius-2);
-  pointer-events: none;
-}
-._textboxMultiline_2dwzn_1:not(._disabled_2dwzn_18) ._textarea_2dwzn_6:focus ~ ._border_2dwzn_23 {
-  top: -1px;
-  bottom: -1px;
-  border-width: 2px;
-  border-color: var(--color-accent);
-}
-._noBorder_2dwzn_40 ._textarea_2dwzn_6:not(:focus) ~ ._border_2dwzn_23 {
-  border-color: transparent;
-}
-._noBorder_2dwzn_40:not(._disabled_2dwzn_18) ._textarea_2dwzn_6:not(:focus):hover ~ ._border_2dwzn_23 {
-  border-color: var(--color-silver);
-}
-
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm5vZGVfbW9kdWxlcy9AY3JlYXRlLWZpZ21hLXBsdWdpbi91aS9saWIvY29tcG9uZW50cy90ZXh0Ym94L3RleHRib3gtbXVsdGlsaW5lL3RleHRib3gtbXVsdGlsaW5lLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGtCQUFrQjtFQUNsQix5QkFBeUI7QUFDM0I7O0FBRUE7RUFDRSxjQUFjO0VBQ2QsV0FBVztFQUNYLDJDQUEyQztFQUMzQyw2QkFBNkI7RUFDN0IscUNBQXFDO0VBQ3JDLDRCQUE0QjtFQUM1QixZQUFZO0FBQ2Q7QUFDQTtFQUNFLDRCQUE0QjtBQUM5QjtBQUNBO0VBQ0UsbUJBQW1CO0VBQ25CLDBCQUEwQjtBQUM1Qjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixNQUFNO0VBQ04sUUFBUTtFQUNSLFNBQVM7RUFDVCxPQUFPO0VBQ1AsaUJBQWlCO0VBQ2pCLGlDQUFpQztFQUNqQyxxQ0FBcUM7RUFDckMsb0JBQW9CO0FBQ3RCO0FBQ0E7RUFDRSxTQUFTO0VBQ1QsWUFBWTtFQUNaLGlCQUFpQjtFQUNqQixpQ0FBaUM7QUFDbkM7QUFDQTtFQUNFLHlCQUF5QjtBQUMzQjtBQUNBO0VBQ0UsaUNBQWlDO0FBQ25DIiwiZmlsZSI6Im5vZGVfbW9kdWxlcy9AY3JlYXRlLWZpZ21hLXBsdWdpbi91aS9saWIvY29tcG9uZW50cy90ZXh0Ym94L3RleHRib3gtbXVsdGlsaW5lL3RleHRib3gtbXVsdGlsaW5lLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi50ZXh0Ym94TXVsdGlsaW5lIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICB6LWluZGV4OiB2YXIoLS16LWluZGV4LTEpO1xufVxuXG4udGV4dGFyZWEge1xuICBkaXNwbGF5OiBibG9jaztcbiAgd2lkdGg6IDEwMCU7XG4gIHBhZGRpbmc6IDZweCAwIDZweCB2YXIoLS1zcGFjZS1leHRyYS1zbWFsbCk7XG4gIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50O1xuICBib3JkZXItcmFkaXVzOiB2YXIoLS1ib3JkZXItcmFkaXVzLTIpO1xuICBjb2xvcjogdmFyKC0tY29sb3ItYmxhY2stODApO1xuICByZXNpemU6IG5vbmU7XG59XG4udGV4dGFyZWE6OnBsYWNlaG9sZGVyIHtcbiAgY29sb3I6IHZhcigtLWNvbG9yLWJsYWNrLTMwKTtcbn1cbi5kaXNhYmxlZCAudGV4dGFyZWEge1xuICBjdXJzb3I6IG5vdC1hbGxvd2VkO1xuICBvcGFjaXR5OiB2YXIoLS1vcGFjaXR5LTMwKTtcbn1cblxuLmJvcmRlciB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgdG9wOiAwO1xuICByaWdodDogMDtcbiAgYm90dG9tOiAwO1xuICBsZWZ0OiAwO1xuICBib3JkZXItd2lkdGg6IDFweDtcbiAgYm9yZGVyLWNvbG9yOiB2YXIoLS1jb2xvci1zaWx2ZXIpO1xuICBib3JkZXItcmFkaXVzOiB2YXIoLS1ib3JkZXItcmFkaXVzLTIpO1xuICBwb2ludGVyLWV2ZW50czogbm9uZTtcbn1cbi50ZXh0Ym94TXVsdGlsaW5lOm5vdCguZGlzYWJsZWQpIC50ZXh0YXJlYTpmb2N1cyB+IC5ib3JkZXIge1xuICB0b3A6IC0xcHg7XG4gIGJvdHRvbTogLTFweDtcbiAgYm9yZGVyLXdpZHRoOiAycHg7XG4gIGJvcmRlci1jb2xvcjogdmFyKC0tY29sb3ItYWNjZW50KTtcbn1cbi5ub0JvcmRlciAudGV4dGFyZWE6bm90KDpmb2N1cykgfiAuYm9yZGVyIHtcbiAgYm9yZGVyLWNvbG9yOiB0cmFuc3BhcmVudDtcbn1cbi5ub0JvcmRlcjpub3QoLmRpc2FibGVkKSAudGV4dGFyZWE6bm90KDpmb2N1cyk6aG92ZXIgfiAuYm9yZGVyIHtcbiAgYm9yZGVyLWNvbG9yOiB2YXIoLS1jb2xvci1zaWx2ZXIpO1xufVxuIl19 */`;
-        document.head.append(element);
-      }
-      textbox_multiline_default = { "textboxMultiline": "_textboxMultiline_2dwzn_1", "textarea": "_textarea_2dwzn_6", "disabled": "_disabled_2dwzn_18", "border": "_border_2dwzn_23", "noBorder": "_noBorder_2dwzn_40" };
-    }
-  });
-
-  // node_modules/@create-figma-plugin/ui/lib/components/textbox/textbox-multiline/textbox-multiline.js
-  function TextboxMultiline(_a) {
-    var _b = _a, { disabled = false, name, noBorder = false, onInput = function() {
-    }, onValueInput = function() {
-    }, placeholder, propagateEscapeKeyDown = true, revertOnEscapeKeyDown = false, rows = 3, spellCheck = false, validateOnBlur, value } = _b, rest = __objRest(_b, ["disabled", "name", "noBorder", "onInput", "onValueInput", "placeholder", "propagateEscapeKeyDown", "revertOnEscapeKeyDown", "rows", "spellCheck", "validateOnBlur", "value"]);
-    const textAreaElementRef = s2(null);
-    const isRevertOnEscapeKeyDownRef = s2(false);
-    const [originalValue, setOriginalValue] = l2(EMPTY_STRING);
-    const setTextAreaElementValue = A(function(value2) {
-      const textAreaElement = getCurrentFromRef(textAreaElementRef);
-      textAreaElement.value = value2;
-      const inputEvent = document.createEvent("Event");
-      inputEvent.initEvent("input", true, true);
-      textAreaElement.dispatchEvent(inputEvent);
-    }, []);
-    const handleBlur = A(function() {
-      if (isRevertOnEscapeKeyDownRef.current === true) {
-        isRevertOnEscapeKeyDownRef.current = false;
-        return;
-      }
-      if (typeof validateOnBlur !== "undefined") {
-        const result = validateOnBlur(value);
-        if (typeof result === "string") {
-          setTextAreaElementValue(result);
-          setOriginalValue(EMPTY_STRING);
-          return;
-        }
-        if (result === false) {
-          if (value !== originalValue) {
-            setTextAreaElementValue(originalValue);
-          }
-          setOriginalValue(EMPTY_STRING);
-          return;
-        }
-      }
-      setOriginalValue(EMPTY_STRING);
-    }, [originalValue, setTextAreaElementValue, validateOnBlur, value]);
-    const handleFocus = A(function(event) {
-      setOriginalValue(value);
-      event.currentTarget.select();
-    }, [value]);
-    const handleInput = A(function(event) {
-      onValueInput(event.currentTarget.value, name);
-      onInput(event);
-    }, [name, onInput, onValueInput]);
-    const handleKeyDown = A(function(event) {
-      if (event.key === "Escape") {
-        if (propagateEscapeKeyDown === false) {
-          event.stopPropagation();
-        }
-        if (revertOnEscapeKeyDown === true) {
-          isRevertOnEscapeKeyDownRef.current = true;
-          setTextAreaElementValue(originalValue);
-          setOriginalValue(EMPTY_STRING);
-        }
-        event.currentTarget.blur();
-        return;
-      }
-      if (value === MIXED_STRING && isKeyCodeCharacterGenerating(event.keyCode) === false) {
-        event.preventDefault();
-        event.currentTarget.select();
-      }
-    }, [
-      originalValue,
-      propagateEscapeKeyDown,
-      revertOnEscapeKeyDown,
-      setTextAreaElementValue,
-      value
-    ]);
-    const handleMouseUp = A(function(event) {
-      if (value === MIXED_STRING) {
-        event.preventDefault();
-      }
-    }, [value]);
-    return v("div", { class: createClassName([
-      textbox_multiline_default.textboxMultiline,
-      noBorder === true ? textbox_multiline_default.noBorder : null,
-      disabled === true ? textbox_multiline_default.disabled : null
-    ]) }, v("textarea", __spreadProps(__spreadValues({}, rest), { ref: textAreaElementRef, class: textbox_multiline_default.textarea, disabled: disabled === true, name, onBlur: handleBlur, onFocus: handleFocus, onInput: handleInput, onKeyDown: handleKeyDown, onMouseUp: handleMouseUp, placeholder, rows, spellcheck: spellCheck, tabIndex: disabled === true ? -1 : 0, value: value === MIXED_STRING ? "Mixed" : value })), v("div", { class: textbox_multiline_default.border }));
-  }
-  var EMPTY_STRING;
-  var init_textbox_multiline2 = __esm({
-    "node_modules/@create-figma-plugin/ui/lib/components/textbox/textbox-multiline/textbox-multiline.js"() {
-      init_lib();
-      init_preact_module();
-      init_hooks_module();
-      init_create_class_name();
-      init_get_current_from_ref();
-      init_is_keycode_character_generating();
-      init_textbox_multiline();
-      EMPTY_STRING = "";
-    }
-  });
-
-  // node_modules/@create-figma-plugin/ui/lib/hooks/use-initial-focus/use-initial-focus.js
-  function useInitialFocus() {
-    y2(function() {
-      const focusableElements = document.querySelectorAll(`[${INITIAL_FOCUS_DATA_ATTRIBUTE_NAME}]`);
-      if (focusableElements.length === 0) {
-        throw new Error(`No element with attribute \`${INITIAL_FOCUS_DATA_ATTRIBUTE_NAME}\``);
-      }
-      if (focusableElements.length > 1) {
-        const checkedRadioButtonInputElement = Array.prototype.slice.call(focusableElements).find(function(focusableElement) {
-          const inputElement = focusableElement;
-          return inputElement.type === "radio" && inputElement.checked === true;
-        });
-        if (typeof checkedRadioButtonInputElement !== "undefined") {
-          checkedRadioButtonInputElement.focus();
-          return;
-        }
-      }
-      focusableElements[0].focus();
-    }, []);
-    return {
-      [INITIAL_FOCUS_DATA_ATTRIBUTE_NAME]: true
-    };
-  }
-  var INITIAL_FOCUS_DATA_ATTRIBUTE_NAME;
-  var init_use_initial_focus = __esm({
-    "node_modules/@create-figma-plugin/ui/lib/hooks/use-initial-focus/use-initial-focus.js"() {
-      init_hooks_module();
-      INITIAL_FOCUS_DATA_ATTRIBUTE_NAME = "data-initial-focus";
-    }
-  });
-
-  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/937e1269-0977-44f7-8d57-e429bc663c2a/base.js
+  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/c05463c1-e7aa-48fc-bd4b-164684cef01b/base.js
   var init_base = __esm({
-    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/937e1269-0977-44f7-8d57-e429bc663c2a/base.js"() {
-      if (document.getElementById("172b23f799") === null) {
+    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/c05463c1-e7aa-48fc-bd4b-164684cef01b/base.js"() {
+      if (document.getElementById("6a3ade0e8d") === null) {
         const element = document.createElement("style");
-        element.id = "172b23f799";
-        element.textContent = `@import url('https://fonts.googleapis.com/css?family=Inter:400,600&display=swap');
+        element.id = "6a3ade0e8d";
+        element.textContent = `* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+#create-figma-plugin {
+    display: grid;
+    width: 100%;
+    height: 100%;
+}
 
 :root {
-  /* border-radius */
-  --border-radius-2: 2px;
-  --border-radius-6: 6px;
-  /* box-shadow */
-  --box-shadow: var(--box-shadow-menu);
-  --box-shadow-menu: 0 5px 17px rgba(0, 0, 0, 0.2),
-    0 2px 7px rgba(0, 0, 0, 0.15), inset 0 0 0 0.5px #000000,
-    0 0 0 0.5px rgba(0, 0, 0, 0.1);
-  --box-shadow-modal: 0 2px 14px rgba(0, 0, 0, 0.15),
-    0 0 0 0.5px rgba(0, 0, 0, 0.2);
-  /* color */
-  --color-black: #000000;
-  --color-black-3-translucent: rgba(0, 0, 0, 0.03);
-  --color-black-6-translucent: rgba(0, 0, 0, 0.06);
-  --color-black-30: #b3b3b3;
-  --color-black-30-translucent: rgba(0, 0, 0, 0.3);
-  --color-black-80: #333333;
-  --color-black-80-translucent: rgba(0, 0, 0, 0.8);
-  --color-blue: #18a0fb;
-  --color-blue-30-translucent: rgba(24, 160, 251, 0.3);
-  --color-figjam-purple: #974bff;
-  --color-figjam-purple-20-translucent: rgba(151, 71, 255, 0.2);
-  --color-green: #1bc47d;
-  --color-hud: #222222;
-  --color-purple: #7b61ff;
-  --color-red: #f24822;
-  --color-selection-a: #daebf7;
-  --color-selection-b: #edf5fa;
-  --color-silver: #e5e5e5;
-  --color-white: #ffffff;
-  --color-white-20-translucent: rgba(255, 255, 255, 0.2);
-  --color-white-40-translucent: rgba(255, 255, 255, 0.4);
-  --color-yellow: #ffeb00;
-  /* font */
-  --font-family: 'Inter', 'Helvetica', sans-serif;
-  --font-family-code: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
-    'Courier New', monospace;
-  --font-size-11: 11px;
-  --font-size-12: 12px;
-  --font-weight-regular: 400;
-  --font-weight-bold: 600;
-  --line-height-16: 16px;
-  /* opacity */
-  --opacity-30: 0.3;
-  /* space */
-  --space-extra-small: 8px;
-  --space-small: 12px;
-  --space-medium: 16px;
-  --space-large: 20px;
-  --space-extra-large: 24px;
-  /* z-index */
-  --z-index-1: 1;
-  --z-index-2: 2;
+    font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    color: #101828;
 }
 
-* {
-  box-sizing: border-box;
-  border-width: 0;
-  border-style: solid;
-  border-color: currentColor;
+div {
+    user-select: none;
 }
 
-body {
-  margin: 0;
-  font-family: var(--font-family);
-  font-size: var(--font-size-11);
-  font-weight: var(--font-weight-regular);
-  line-height: var(--line-height-16);
+.padding {
+    margin-top: var(--padding-top);
+    margin-bottom: var(--padding-bottom);
+    margin-left: var(--padding-start);
+    margin-right: var(--padding-end);
 }
 
-div,
-span {
-  cursor: default;
-  user-select: none;
+.size {
+    height: var(--height);
+    width: var(--width);
 }
 
-h1,
-h2,
-h3 {
-  margin: 0;
-  font-weight: inherit;
-}
-
-button {
-  padding: 0;
-  border: 0;
-  -webkit-appearance: none;
-  background-color: transparent;
-  font: inherit;
-  outline: 0;
-}
-
-hr {
-  border: 0;
-  margin: 0;
-}
-
-label {
-  display: block;
-}
-
-input,
-textarea {
-  padding: 0;
-  border: 0;
-  margin: 0;
-  -webkit-appearance: none;
-  cursor: default;
-  font: inherit;
-  outline: 0;
-}
-
-svg {
-  display: block;
-}
-
-.theme-figjam {
-  --color-accent: var(--color-figjam-purple);
-}
-.theme-figjam ::selection {
-  background-color: var(--color-figjam-purple-20-translucent);
-}
-
-.theme-figma {
-  --color-accent: var(--color-blue);
-}
-.theme-figma ::selection {
-  background-color: var(--color-blue-30-translucent);
+.color {
+    color: var(--content-color);
+    background: var(--background-color);
 }
 `;
-        document.head.prepend(element);
+        document.head.append(element);
       }
     }
   });
 
-  // node_modules/@create-figma-plugin/ui/lib/utilities/render.js
-  function render(Plugin2) {
-    return function(rootNode2, props) {
-      S(v(Plugin2, __spreadValues({}, props)), rootNode2);
+  // src/components/base.tsx
+  function baseProps({ alignment, padding, height, width, content, background }, ...classes) {
+    return {
+      class: composeClasses("padding", "color", "size", alignClass(alignment), ...classes),
+      style: composePaddingAsProperties(padding) + composeSizeAsProperties(width, height) + composeColorAsProperties({ content, background })
     };
   }
-  var init_render = __esm({
-    "node_modules/@create-figma-plugin/ui/lib/utilities/render.js"() {
+  function additionalProps(base, ...props) {
+    return {
+      class: base.class,
+      style: base.style + " " + composeProperties(...props)
+    };
+  }
+  var init_base2 = __esm({
+    "src/components/base.tsx"() {
+      init_composeFunctions();
       init_base();
+    }
+  });
+
+  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/c8ce8d8c-e394-4a80-b4eb-3248b8f9aadf/input.js
+  var input_default;
+  var init_input = __esm({
+    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/c8ce8d8c-e394-4a80-b4eb-3248b8f9aadf/input.js"() {
+      if (document.getElementById("e56f442993") === null) {
+        const element = document.createElement("style");
+        element.id = "e56f442993";
+        element.textContent = `@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Round');
+
+._button_x0d00_3 {
+    display: block;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #C8CCE5;
+    color: #000E52;
+
+    font-weight: 600;
+    font-size: 14px;
+}
+
+._button_x0d00_3:hover {
+    cursor: pointer;
+}
+
+._button_x0d00_3:disabled {
+    background: #F9FAFB;
+    color: #98A2B3;
+}
+
+._basicInput_x0d00_25 {
+    display: block;
+
+    padding: 0px;
+    min-height: 34px;
+
+    border: none;
+    outline: none;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+._basicInput_x0d00_25::placeholder {
+    color: #667085;
+}
+
+._outlinedInput_x0d00_42 {
+    display: block;
+
+    padding: 8px;
+    min-height: 34px;
+
+    border-style: solid;
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: #E4E7EC;
+
+    outline: none;
+
+    font-size: 12px;
+    font-weight: 400;
+}
+
+._outlinedInput_x0d00_42::placeholder {
+    color: #98A2B3;
+}
+
+._radioInput_x0d00_63 {
+    display: block;
+}
+
+
+._radioInput_x0d00_63 > input {
+    display: none;
+}
+
+._radioInput_x0d00_63:hover {
+    cursor: pointer;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9jb21wb25lbnRzL2lucHV0LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw0RUFBNEU7O0FBRTVFO0lBQ0ksY0FBYzs7SUFFZCxZQUFZO0lBQ1osa0JBQWtCOztJQUVsQixtQkFBbUI7SUFDbkIsY0FBYzs7SUFFZCxnQkFBZ0I7SUFDaEIsZUFBZTtBQUNuQjs7QUFFQTtJQUNJLGVBQWU7QUFDbkI7O0FBRUE7SUFDSSxtQkFBbUI7SUFDbkIsY0FBYztBQUNsQjs7QUFFQTtJQUNJLGNBQWM7O0lBRWQsWUFBWTtJQUNaLGdCQUFnQjs7SUFFaEIsWUFBWTtJQUNaLGFBQWE7O0lBRWIsZUFBZTtJQUNmLGdCQUFnQjtBQUNwQjs7QUFFQTtJQUNJLGNBQWM7QUFDbEI7O0FBRUE7SUFDSSxjQUFjOztJQUVkLFlBQVk7SUFDWixnQkFBZ0I7O0lBRWhCLG1CQUFtQjtJQUNuQixrQkFBa0I7SUFDbEIsaUJBQWlCO0lBQ2pCLHFCQUFxQjs7SUFFckIsYUFBYTs7SUFFYixlQUFlO0lBQ2YsZ0JBQWdCO0FBQ3BCOztBQUVBO0lBQ0ksY0FBYztBQUNsQjs7QUFFQTtJQUNJLGNBQWM7QUFDbEI7OztBQUdBO0lBQ0ksYUFBYTtBQUNqQjs7QUFFQTtJQUNJLGVBQWU7QUFDbkIiLCJmaWxlIjoic3JjL2NvbXBvbmVudHMvaW5wdXQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCB1cmwoJ2h0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20vaWNvbj9mYW1pbHk9TWF0ZXJpYWwrSWNvbnMrUm91bmQnKTtcblxuLmJ1dHRvbiB7XG4gICAgZGlzcGxheTogYmxvY2s7XG5cbiAgICBib3JkZXI6IG5vbmU7XG4gICAgYm9yZGVyLXJhZGl1czogOHB4O1xuXG4gICAgYmFja2dyb3VuZDogI0M4Q0NFNTtcbiAgICBjb2xvcjogIzAwMEU1MjtcblxuICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgZm9udC1zaXplOiAxNHB4O1xufVxuXG4uYnV0dG9uOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG59XG5cbi5idXR0b246ZGlzYWJsZWQge1xuICAgIGJhY2tncm91bmQ6ICNGOUZBRkI7XG4gICAgY29sb3I6ICM5OEEyQjM7XG59XG5cbi5iYXNpY0lucHV0IHtcbiAgICBkaXNwbGF5OiBibG9jaztcblxuICAgIHBhZGRpbmc6IDBweDtcbiAgICBtaW4taGVpZ2h0OiAzNHB4O1xuXG4gICAgYm9yZGVyOiBub25lO1xuICAgIG91dGxpbmU6IG5vbmU7XG5cbiAgICBmb250LXNpemU6IDE0cHg7XG4gICAgZm9udC13ZWlnaHQ6IDUwMDtcbn1cblxuLmJhc2ljSW5wdXQ6OnBsYWNlaG9sZGVyIHtcbiAgICBjb2xvcjogIzY2NzA4NTtcbn1cblxuLm91dGxpbmVkSW5wdXQge1xuICAgIGRpc3BsYXk6IGJsb2NrO1xuXG4gICAgcGFkZGluZzogOHB4O1xuICAgIG1pbi1oZWlnaHQ6IDM0cHg7XG5cbiAgICBib3JkZXItc3R5bGU6IHNvbGlkO1xuICAgIGJvcmRlci1yYWRpdXM6IDhweDtcbiAgICBib3JkZXItd2lkdGg6IDFweDtcbiAgICBib3JkZXItY29sb3I6ICNFNEU3RUM7XG5cbiAgICBvdXRsaW5lOiBub25lO1xuXG4gICAgZm9udC1zaXplOiAxMnB4O1xuICAgIGZvbnQtd2VpZ2h0OiA0MDA7XG59XG5cbi5vdXRsaW5lZElucHV0OjpwbGFjZWhvbGRlciB7XG4gICAgY29sb3I6ICM5OEEyQjM7XG59XG5cbi5yYWRpb0lucHV0IHtcbiAgICBkaXNwbGF5OiBibG9jaztcbn1cblxuXG4ucmFkaW9JbnB1dCA+IGlucHV0IHtcbiAgICBkaXNwbGF5OiBub25lO1xufVxuXG4ucmFkaW9JbnB1dDpob3ZlciB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xufSJdfQ== */`;
+        document.head.append(element);
+      }
+      input_default = { "button": "_button_x0d00_3", "basicInput": "_basicInput_x0d00_25", "outlinedInput": "_outlinedInput_x0d00_42", "radioInput": "_radioInput_x0d00_63" };
+    }
+  });
+
+  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/59c72480-fb26-41a2-9c89-573c1c3474fb/container.js
+  var container_default2;
+  var init_container2 = __esm({
+    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/59c72480-fb26-41a2-9c89-573c1c3474fb/container.js"() {
+      if (document.getElementById("2da5ba188e") === null) {
+        const element = document.createElement("style");
+        element.id = "2da5ba188e";
+        element.textContent = `
+._column_yp7iz_2 {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--spaced-by);
+}
+
+._column_yp7iz_2 > * {
+    align-self: flex-start;
+}
+
+._row_yp7iz_12 {
+    display: flex;
+    flex-direction: row;
+    column-gap: var(--spaced-by);
+}
+
+._row_yp7iz_12 > * {
+    align-self: flex-start;
+}
+
+._box_yp7iz_22 {
+    display: grid;
+}
+
+._fitParent_yp7iz_26 {
+    width: 100%;
+    height: 100%;
+}
+
+._box_yp7iz_22 > * {
+    place-self: start;
+}
+
+._column_yp7iz_2 > ._alignStart_yp7iz_35 {
+    align-self: flex-start;
+}
+
+._column_yp7iz_2 > ._alignEnd_yp7iz_39 {
+    align-self: flex-end;
+}
+
+._column_yp7iz_2 > ._alignCenter_yp7iz_43 {
+    align-self: center;
+}
+
+._column_yp7iz_2 > ._alignFill_yp7iz_47 {
+    align-self: stretch;
+}
+
+._row_yp7iz_12 > ._alignStart_yp7iz_35 {
+    align-self: flex-start;
+}
+
+._row_yp7iz_12 > ._alignEnd_yp7iz_39 {
+    align-self: flex-end;
+}
+
+._row_yp7iz_12 > ._alignCenter_yp7iz_43 {
+    align-self: center;
+}
+
+._row_yp7iz_12 > ._alignFill_yp7iz_47 {
+    align-self: stretch;
+}
+
+._box_yp7iz_22 > ._alignStart_yp7iz_35 {
+    place-self: center start;
+}
+
+._box_yp7iz_22 > ._alignEnd_yp7iz_39 {
+    place-self: center end;
+}
+
+._box_yp7iz_22 > ._alignCenter_yp7iz_43 {
+    place-self: center;
+}
+
+._box_yp7iz_22 > ._alignFill_yp7iz_47 {
+    place-self: stretch;
+}
+
+._box_yp7iz_22 > ._alignTopStart_yp7iz_83 {
+    place-self: start;
+}
+
+._box_yp7iz_22 > ._alignTopCenter_yp7iz_87 {
+    place-self: start center;
+}
+
+._box_yp7iz_22 > ._alignTopEnd_yp7iz_91 {
+    place-self: start end;
+}
+
+._box_yp7iz_22 > ._alignBottomStart_yp7iz_95 {
+    place-self: end start;
+}
+
+._box_yp7iz_22 > ._alignBottomCenter_yp7iz_99 {
+    place-self: end center;
+}
+
+._box_yp7iz_22 > ._alignBottomEnd_yp7iz_103 {
+    place-self: end;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9jb21wb25lbnRzL2NvbnRhaW5lci5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBO0lBQ0ksYUFBYTtJQUNiLHNCQUFzQjtJQUN0Qix5QkFBeUI7QUFDN0I7O0FBRUE7SUFDSSxzQkFBc0I7QUFDMUI7O0FBRUE7SUFDSSxhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLDRCQUE0QjtBQUNoQzs7QUFFQTtJQUNJLHNCQUFzQjtBQUMxQjs7QUFFQTtJQUNJLGFBQWE7QUFDakI7O0FBRUE7SUFDSSxXQUFXO0lBQ1gsWUFBWTtBQUNoQjs7QUFFQTtJQUNJLGlCQUFpQjtBQUNyQjs7QUFFQTtJQUNJLHNCQUFzQjtBQUMxQjs7QUFFQTtJQUNJLG9CQUFvQjtBQUN4Qjs7QUFFQTtJQUNJLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLG1CQUFtQjtBQUN2Qjs7QUFFQTtJQUNJLHNCQUFzQjtBQUMxQjs7QUFFQTtJQUNJLG9CQUFvQjtBQUN4Qjs7QUFFQTtJQUNJLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLG1CQUFtQjtBQUN2Qjs7QUFFQTtJQUNJLHdCQUF3QjtBQUM1Qjs7QUFFQTtJQUNJLHNCQUFzQjtBQUMxQjs7QUFFQTtJQUNJLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLG1CQUFtQjtBQUN2Qjs7QUFFQTtJQUNJLGlCQUFpQjtBQUNyQjs7QUFFQTtJQUNJLHdCQUF3QjtBQUM1Qjs7QUFFQTtJQUNJLHFCQUFxQjtBQUN6Qjs7QUFFQTtJQUNJLHFCQUFxQjtBQUN6Qjs7QUFFQTtJQUNJLHNCQUFzQjtBQUMxQjs7QUFFQTtJQUNJLGVBQWU7QUFDbkIiLCJmaWxlIjoic3JjL2NvbXBvbmVudHMvY29udGFpbmVyLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuLmNvbHVtbiB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIHJvdy1nYXA6IHZhcigtLXNwYWNlZC1ieSk7XG59XG5cbi5jb2x1bW4gPiAqIHtcbiAgICBhbGlnbi1zZWxmOiBmbGV4LXN0YXJ0O1xufVxuXG4ucm93IHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGZsZXgtZGlyZWN0aW9uOiByb3c7XG4gICAgY29sdW1uLWdhcDogdmFyKC0tc3BhY2VkLWJ5KTtcbn1cblxuLnJvdyA+ICoge1xuICAgIGFsaWduLXNlbGY6IGZsZXgtc3RhcnQ7XG59XG5cbi5ib3gge1xuICAgIGRpc3BsYXk6IGdyaWQ7XG59XG5cbi5maXRQYXJlbnQge1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGhlaWdodDogMTAwJTtcbn1cblxuLmJveCA+ICoge1xuICAgIHBsYWNlLXNlbGY6IHN0YXJ0O1xufVxuXG4uY29sdW1uID4gLmFsaWduU3RhcnQge1xuICAgIGFsaWduLXNlbGY6IGZsZXgtc3RhcnQ7XG59XG5cbi5jb2x1bW4gPiAuYWxpZ25FbmQge1xuICAgIGFsaWduLXNlbGY6IGZsZXgtZW5kO1xufVxuXG4uY29sdW1uID4gLmFsaWduQ2VudGVyIHtcbiAgICBhbGlnbi1zZWxmOiBjZW50ZXI7XG59XG5cbi5jb2x1bW4gPiAuYWxpZ25GaWxsIHtcbiAgICBhbGlnbi1zZWxmOiBzdHJldGNoO1xufVxuXG4ucm93ID4gLmFsaWduU3RhcnQge1xuICAgIGFsaWduLXNlbGY6IGZsZXgtc3RhcnQ7XG59XG5cbi5yb3cgPiAuYWxpZ25FbmQge1xuICAgIGFsaWduLXNlbGY6IGZsZXgtZW5kO1xufVxuXG4ucm93ID4gLmFsaWduQ2VudGVyIHtcbiAgICBhbGlnbi1zZWxmOiBjZW50ZXI7XG59XG5cbi5yb3cgPiAuYWxpZ25GaWxsIHtcbiAgICBhbGlnbi1zZWxmOiBzdHJldGNoO1xufVxuXG4uYm94ID4gLmFsaWduU3RhcnQge1xuICAgIHBsYWNlLXNlbGY6IGNlbnRlciBzdGFydDtcbn1cblxuLmJveCA+IC5hbGlnbkVuZCB7XG4gICAgcGxhY2Utc2VsZjogY2VudGVyIGVuZDtcbn1cblxuLmJveCA+IC5hbGlnbkNlbnRlciB7XG4gICAgcGxhY2Utc2VsZjogY2VudGVyO1xufVxuXG4uYm94ID4gLmFsaWduRmlsbCB7XG4gICAgcGxhY2Utc2VsZjogc3RyZXRjaDtcbn1cblxuLmJveCA+IC5hbGlnblRvcFN0YXJ0IHtcbiAgICBwbGFjZS1zZWxmOiBzdGFydDtcbn1cblxuLmJveCA+IC5hbGlnblRvcENlbnRlciB7XG4gICAgcGxhY2Utc2VsZjogc3RhcnQgY2VudGVyO1xufVxuXG4uYm94ID4gLmFsaWduVG9wRW5kIHtcbiAgICBwbGFjZS1zZWxmOiBzdGFydCBlbmQ7XG59XG5cbi5ib3ggPiAuYWxpZ25Cb3R0b21TdGFydCB7XG4gICAgcGxhY2Utc2VsZjogZW5kIHN0YXJ0O1xufVxuXG4uYm94ID4gLmFsaWduQm90dG9tQ2VudGVyIHtcbiAgICBwbGFjZS1zZWxmOiBlbmQgY2VudGVyO1xufVxuXG4uYm94ID4gLmFsaWduQm90dG9tRW5kIHtcbiAgICBwbGFjZS1zZWxmOiBlbmQ7XG59XG4iXX0= */`;
+        document.head.append(element);
+      }
+      container_default2 = { "column": "_column_yp7iz_2", "row": "_row_yp7iz_12", "box": "_box_yp7iz_22", "fitParent": "_fitParent_yp7iz_26", "alignStart": "_alignStart_yp7iz_35", "alignEnd": "_alignEnd_yp7iz_39", "alignCenter": "_alignCenter_yp7iz_43", "alignFill": "_alignFill_yp7iz_47", "alignTopStart": "_alignTopStart_yp7iz_83", "alignTopCenter": "_alignTopCenter_yp7iz_87", "alignTopEnd": "_alignTopEnd_yp7iz_91", "alignBottomStart": "_alignBottomStart_yp7iz_95", "alignBottomCenter": "_alignBottomCenter_yp7iz_99", "alignBottomEnd": "_alignBottomEnd_yp7iz_103" };
+    }
+  });
+
+  // src/components/container.tsx
+  function Column(_a) {
+    var _b = _a, {
+      children,
+      spacedBy = "0px"
+    } = _b, rest = __objRest(_b, [
+      "children",
+      "spacedBy"
+    ]);
+    return /* @__PURE__ */ v("div", __spreadValues({}, additionalProps(baseProps(rest, container_default2.column), ["spaced-by", spacedBy])), /* @__PURE__ */ v(d, null, children));
+  }
+  function Row(_a) {
+    var _b = _a, {
+      children,
+      spacedBy = "0px"
+    } = _b, rest = __objRest(_b, [
+      "children",
+      "spacedBy"
+    ]);
+    return /* @__PURE__ */ v("div", __spreadValues({}, additionalProps(baseProps(rest, container_default2.row), ["spaced-by", spacedBy])), /* @__PURE__ */ v(d, null, children));
+  }
+  function Box(_a) {
+    var _b = _a, {
+      children,
+      fitParent
+    } = _b, rest = __objRest(_b, [
+      "children",
+      "fitParent"
+    ]);
+    return /* @__PURE__ */ v("div", __spreadValues({}, baseProps(rest, container_default2.box, fitParent ? container_default2.fitParent : void 0)), children ? /* @__PURE__ */ v(d, null, children) : void 0);
+  }
+  var init_container3 = __esm({
+    "src/components/container.tsx"() {
+      init_preact_module();
+      init_container2();
+      init_base2();
+    }
+  });
+
+  // src/components/space.tsx
+  function Space({
+    size,
+    fillGap = false
+  }) {
+    return /* @__PURE__ */ v("div", {
+      style: `width: ${size}; height: ${size}; flex-grow: ${fillGap ? "1" : "unset"}`
+    });
+  }
+  var init_space = __esm({
+    "src/components/space.tsx"() {
       init_preact_module();
     }
   });
 
-  // node_modules/@create-figma-plugin/ui/lib/index.js
-  var init_lib2 = __esm({
-    "node_modules/@create-figma-plugin/ui/lib/index.js"() {
-      init_button2();
-      init_container2();
-      init_vertical_space2();
-      init_textbox_multiline2();
-      init_use_initial_focus();
-      init_render();
+  // src/components/input.tsx
+  function Button(_a) {
+    var _b = _a, {
+      children,
+      onClick,
+      enabled = true,
+      contentPadding = { all: "16px" },
+      buttonStyleClass = input_default.button
+    } = _b, rest = __objRest(_b, [
+      "children",
+      "onClick",
+      "enabled",
+      "contentPadding",
+      "buttonStyleClass"
+    ]);
+    const handleClick = A(function(event) {
+      onClick();
+    }, [onClick]);
+    return /* @__PURE__ */ v("button", __spreadProps(__spreadValues({}, baseProps(rest, buttonStyleClass)), {
+      onClick: handleClick,
+      disabled: !enabled
+    }), /* @__PURE__ */ v(Box, {
+      fitParent: true
+    }, /* @__PURE__ */ v(Row, {
+      padding: contentPadding,
+      alignment: "center"
+    }, children)));
+  }
+  function Input(_a) {
+    var _b = _a, {
+      value,
+      onValueChange,
+      placeholder,
+      outlined = true
+    } = _b, rest = __objRest(_b, [
+      "value",
+      "onValueChange",
+      "placeholder",
+      "outlined"
+    ]);
+    const handleInput = A(function(event) {
+      onValueChange(event.currentTarget.value);
+    }, [onValueChange]);
+    const classes = outlined ? input_default.outlinedInput : input_default.basicInput;
+    return /* @__PURE__ */ v("input", __spreadProps(__spreadValues({
+      type: "text",
+      value
+    }, baseProps(rest, classes)), {
+      onInput: handleInput,
+      placeholder
+    }));
+  }
+  function RadioInput(_a) {
+    var _b = _a, {
+      checked,
+      onClick: onValueChange,
+      checkIcon,
+      checkText
+    } = _b, rest = __objRest(_b, [
+      "checked",
+      "onClick",
+      "checkIcon",
+      "checkText"
+    ]);
+    const handleInput = A(function(event) {
+      onValueChange();
+    }, [onValueChange]);
+    return /* @__PURE__ */ v("label", __spreadValues({}, baseProps(rest, input_default.radioInput)), /* @__PURE__ */ v("input", {
+      type: "radio",
+      checked,
+      onClick: handleInput
+    }), /* @__PURE__ */ v(Row, {
+      alignment: "fill"
+    }, checkIcon ? checkIcon(checked) : void 0, /* @__PURE__ */ v(Space, {
+      size: "8px"
+    }), checkText ? checkText(checked) : void 0));
+  }
+  var init_input2 = __esm({
+    "src/components/input.tsx"() {
+      init_preact_module();
+      init_base2();
+      init_input();
+      init_container3();
+      init_hooks_module();
+      init_space();
+    }
+  });
+
+  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/5740f604-fd34-4ef1-aec3-75efed0c6470/styles.js
+  var init_styles = __esm({
+    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/5740f604-fd34-4ef1-aec3-75efed0c6470/styles.js"() {
+      if (document.getElementById("5a0a0c4773") === null) {
+        const element = document.createElement("style");
+        element.id = "5a0a0c4773";
+        element.textContent = `.scrumalot-theme {
+    --color-accent: #4E5BA6;
+}
+
+.children {
+    padding: 0;
+}`;
+        document.head.append(element);
+      }
+    }
+  });
+
+  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/7bb8ab4f-d42e-451b-b4af-485685f7a335/icons.js
+  var icons_default;
+  var init_icons = __esm({
+    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/7bb8ab4f-d42e-451b-b4af-485685f7a335/icons.js"() {
+      if (document.getElementById("bca423e109") === null) {
+        const element = document.createElement("style");
+        element.id = "bca423e109";
+        element.textContent = `
+._icon_z9bgh_2 {
+    margin: 4px;
+    width: 20px;
+    height: 20px;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9jb21wb25lbnRzL2ljb25zLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0E7SUFDSSxXQUFXO0lBQ1gsV0FBVztJQUNYLFlBQVk7QUFDaEIiLCJmaWxlIjoic3JjL2NvbXBvbmVudHMvaWNvbnMuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4uaWNvbiB7XG4gICAgbWFyZ2luOiA0cHg7XG4gICAgd2lkdGg6IDIwcHg7XG4gICAgaGVpZ2h0OiAyMHB4O1xufVxuIl19 */`;
+        document.head.append(element);
+      }
+      icons_default = { "icon": "_icon_z9bgh_2" };
+    }
+  });
+
+  // src/components/icons.tsx
+  function createSvgIcon(d3) {
+    return /* @__PURE__ */ v("svg", {
+      xmlns: "http://www.w3.org/2000/svg",
+      class: icons_default.icon,
+      viewBox: "0 0 20 20",
+      fill: "currentColor"
+    }, /* @__PURE__ */ v("path", {
+      "fill-rule": "evenodd",
+      d: d3,
+      "clip-rule": "evenodd"
+    }));
+  }
+  function SolidCheck() {
+    return createSvgIcon("M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z");
+  }
+  function OutlinedCircle() {
+    return /* @__PURE__ */ v("svg", {
+      xmlns: "http://www.w3.org/2000/svg",
+      class: icons_default.icon,
+      viewBox: "0 0 20 20",
+      fill: "none"
+    }, /* @__PURE__ */ v("circle", {
+      cx: "10",
+      cy: "10",
+      r: "8",
+      stroke: "currentColor",
+      "stroke-width": "2"
+    }));
+  }
+  function Icon(_a) {
+    var _b = _a, {
+      children,
+      tint = "currentColor"
+    } = _b, rest = __objRest(_b, [
+      "children",
+      "tint"
+    ]);
+    return /* @__PURE__ */ v("div", __spreadValues({}, baseProps(__spreadProps(__spreadValues({}, rest), { content: tint }))), children);
+  }
+  var init_icons2 = __esm({
+    "src/components/icons.tsx"() {
+      init_preact_module();
+      init_base2();
+      init_icons();
+    }
+  });
+
+  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/ffdbb2e0-21cd-4f3e-be12-ea4274cee8c2/text.js
+  var text_default;
+  var init_text = __esm({
+    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/ffdbb2e0-21cd-4f3e-be12-ea4274cee8c2/text.js"() {
+      if (document.getElementById("e4d477f233") === null) {
+        const element = document.createElement("style");
+        element.id = "e4d477f233";
+        element.textContent = `._text_icfdk_1 {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+._body2_icfdk_6 {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+._caption_icfdk_11 {
+    font-weight: 400;
+    font-size: 12px;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9jb21wb25lbnRzL3RleHQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksZ0JBQWdCO0lBQ2hCLGVBQWU7QUFDbkI7O0FBRUE7SUFDSSxnQkFBZ0I7SUFDaEIsZUFBZTtBQUNuQjs7QUFFQTtJQUNJLGdCQUFnQjtJQUNoQixlQUFlO0FBQ25CIiwiZmlsZSI6InNyYy9jb21wb25lbnRzL3RleHQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnRleHQge1xuICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgZm9udC1zaXplOiAxNHB4O1xufVxuXG4uYm9keTIge1xuICAgIGZvbnQtd2VpZ2h0OiA1MDA7XG4gICAgZm9udC1zaXplOiAxNHB4O1xufVxuXG4uY2FwdGlvbiB7XG4gICAgZm9udC13ZWlnaHQ6IDQwMDtcbiAgICBmb250LXNpemU6IDEycHg7XG59Il19 */`;
+        document.head.append(element);
+      }
+      text_default = { "text": "_text_icfdk_1", "body2": "_body2_icfdk_6", "caption": "_caption_icfdk_11" };
+    }
+  });
+
+  // src/components/text.tsx
+  function Text(_a) {
+    var _b = _a, {
+      children,
+      textStyleClass = text_default.text
+    } = _b, rest = __objRest(_b, [
+      "children",
+      "textStyleClass"
+    ]);
+    return /* @__PURE__ */ v("span", __spreadValues({}, baseProps(rest, textStyleClass)), children);
+  }
+  function Body2(_a) {
+    var _b = _a, {
+      children,
+      textStyleClass = text_default.body2
+    } = _b, rest = __objRest(_b, [
+      "children",
+      "textStyleClass"
+    ]);
+    return /* @__PURE__ */ v(Text, __spreadValues({
+      textStyleClass
+    }, rest), children);
+  }
+  function Caption(_a) {
+    var _b = _a, {
+      children,
+      textStyleClass = text_default.caption
+    } = _b, rest = __objRest(_b, [
+      "children",
+      "textStyleClass"
+    ]);
+    return /* @__PURE__ */ v(Text, __spreadValues({
+      textStyleClass
+    }, rest), children);
+  }
+  var init_text2 = __esm({
+    "src/components/text.tsx"() {
+      init_preact_module();
+      init_base2();
+      init_text();
+    }
+  });
+
+  // src/voting.tsx
+  function summaryOfVotingOptions(s2) {
+    return s2.options.join(", ");
+  }
+  function summaryOfVote(option) {
+    if (!isNaN(Number(option))) {
+      return `${option} ${option == "1" ? "Point" : "Points"}`;
+    } else {
+      return option;
+    }
+  }
+  var Fibonacci, FibonacciHalf, TShirtSizes, Square;
+  var init_voting = __esm({
+    "src/voting.tsx"() {
+      Fibonacci = { kind: "numeric", options: ["0", "1", "2", "3", "5", "8", "13", "21", "34", "55", "89", "144"] };
+      FibonacciHalf = { kind: "numeric", options: ["0", "0.5", "1", "2", "3", "5", "8", "13", "21", "34", "55", "89", "144"] };
+      TShirtSizes = { kind: "categorical", options: ["XS", "S", "M", "L", "XL", "XXL"] };
+      Square = { kind: "numeric", options: ["0", "1", "2", "4", "8", "16", "32", "64", "128", "256"] };
     }
   });
 
@@ -1177,33 +1247,160 @@ svg {
   __export(ui_exports, {
     default: () => ui_default
   });
-  function Plugin(props) {
-    const [text, setText] = l2(props.text);
-    const handleUpdateButtonClick = A(function() {
-      emit("UPDATE_TEXT", text);
-    }, [text]);
-    return /* @__PURE__ */ v(Container, null, /* @__PURE__ */ v(VerticalSpace, {
-      space: "large"
-    }), /* @__PURE__ */ v(TextboxMultiline, __spreadProps(__spreadValues({}, useInitialFocus()), {
-      onValueInput: setText,
-      value: text
-    })), /* @__PURE__ */ v(VerticalSpace, {
-      space: "large"
+  function InitVotePlugin() {
+    const votingOptionsList = [
+      Fibonacci,
+      FibonacciHalf,
+      TShirtSizes,
+      Square
+    ];
+    const [storyName, setStoryName] = l2("");
+    const [storyDescription, setStoryDescription] = l2("");
+    const [votingChoice, setVotingChoice] = l2(0);
+    const handleOnStart = A(() => {
+      emit("SET_VOTING", votingOptionsList[votingChoice], storyName, storyDescription);
+    }, [storyName, storyDescription, votingChoice]);
+    return /* @__PURE__ */ v(Box, {
+      fitParent: true
+    }, /* @__PURE__ */ v(Column, {
+      padding: { all: "16px" },
+      alignment: "fill"
+    }, /* @__PURE__ */ v(Input, {
+      value: storyName,
+      onValueChange: setStoryName,
+      outlined: false,
+      placeholder: "A story needs a name...",
+      alignment: "fill"
+    }), /* @__PURE__ */ v(Space, {
+      size: "12px"
+    }), /* @__PURE__ */ v(Input, {
+      value: storyDescription,
+      onValueChange: setStoryDescription,
+      outlined: true,
+      placeholder: "Description",
+      alignment: "fill"
+    }), /* @__PURE__ */ v(Space, {
+      size: "32px"
+    }), /* @__PURE__ */ v(Divider, null), /* @__PURE__ */ v(Space, {
+      size: "32px"
+    }), /* @__PURE__ */ v(Column, {
+      spacedBy: "8px",
+      alignment: "fill"
+    }, votingOptionsList.map((opt, index) => {
+      return /* @__PURE__ */ v(SCRadioInput, {
+        text: summaryOfVotingOptions(opt),
+        checked: votingChoice == index,
+        onClick: () => {
+          setVotingChoice(index);
+        }
+      });
+    })), /* @__PURE__ */ v(Space, {
+      size: "24px",
+      fillGap: true
     }), /* @__PURE__ */ v(Button, {
-      fullWidth: true,
-      onClick: handleUpdateButtonClick
-    }, "Update Text"), /* @__PURE__ */ v(VerticalSpace, {
-      space: "small"
-    }));
+      alignment: "fill",
+      onClick: handleOnStart,
+      enabled: storyName.length > 2 && storyDescription.length > 2
+    }, "Start")));
   }
-  var ui_default;
+  function VotePlugin({
+    votingOptions,
+    storyName,
+    storyDescription,
+    votedFor
+  }) {
+    const [vote, setVote] = l2(votedFor ? votingOptions.options.indexOf(votedFor) : -1);
+    const handleOnSubmit = A(() => {
+      emit("SET_VOTE", votingOptions.options[vote]);
+    }, [votingOptions, vote]);
+    return /* @__PURE__ */ v(Box, {
+      fitParent: true
+    }, /* @__PURE__ */ v(Column, {
+      padding: { all: "16px" },
+      alignment: "fill"
+    }, /* @__PURE__ */ v(Body2, null, storyName), /* @__PURE__ */ v(Space, {
+      size: "4px"
+    }), /* @__PURE__ */ v(Caption, null, storyDescription), /* @__PURE__ */ v(Space, {
+      size: "16px"
+    }), /* @__PURE__ */ v(Divider, null), /* @__PURE__ */ v(Space, {
+      size: "16px"
+    }), /* @__PURE__ */ v(Column, {
+      spacedBy: "8px",
+      alignment: "fill"
+    }, votingOptions.options.map((opt, index) => {
+      return /* @__PURE__ */ v(SCRadioInput, {
+        text: summaryOfVote(opt),
+        checked: vote == index,
+        onClick: () => {
+          setVote(index);
+        }
+      });
+    })), /* @__PURE__ */ v(Space, {
+      size: "24px",
+      fillGap: true
+    }), /* @__PURE__ */ v(Button, {
+      alignment: "fill",
+      onClick: handleOnSubmit
+    }, "Submit")));
+  }
+  function Divider() {
+    return /* @__PURE__ */ v(Box, {
+      height: "1px",
+      background: "#E4E7EC",
+      alignment: "fill"
+    });
+  }
+  function SCRadioInput(_a) {
+    var _b = _a, {
+      text,
+      checked,
+      onClick,
+      checkIcon = (checked2) => {
+        return /* @__PURE__ */ v(Icon, {
+          tint: checked2 ? "#4E5BA6" : "#E4E7EC"
+        }, checked2 ? /* @__PURE__ */ v(SolidCheck, null) : /* @__PURE__ */ v(OutlinedCircle, null));
+      },
+      checkText = () => {
+        return /* @__PURE__ */ v(Caption, {
+          alignment: "center"
+        }, text);
+      }
+    } = _b, rest = __objRest(_b, [
+      "text",
+      "checked",
+      "onClick",
+      "checkIcon",
+      "checkText"
+    ]);
+    return /* @__PURE__ */ v(RadioInput, __spreadValues({
+      checked,
+      onClick,
+      checkIcon,
+      checkText
+    }, rest));
+  }
+  function ui_default(rootNode2, data) {
+    switch (data.name) {
+      case "INIT_VOTING_DATA":
+        S(/* @__PURE__ */ v(InitVotePlugin, null), rootNode2);
+        break;
+      case "VOTING_DATA":
+        S(/* @__PURE__ */ v(VotePlugin, __spreadValues({}, data)), rootNode2);
+        break;
+    }
+  }
   var init_ui = __esm({
     "src/ui.tsx"() {
-      init_lib2();
-      init_lib();
       init_preact_module();
+      init_lib();
       init_hooks_module();
-      ui_default = render(Plugin);
+      init_input2();
+      init_styles();
+      init_container3();
+      init_space();
+      init_icons2();
+      init_text2();
+      init_voting();
     }
   });
 
