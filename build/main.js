@@ -1,7 +1,9 @@
 (() => {
   var __defProp = Object.defineProperty;
   var __defProps = Object.defineProperties;
+  var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
   var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
+  var __getOwnPropNames = Object.getOwnPropertyNames;
   var __getOwnPropSymbols = Object.getOwnPropertySymbols;
   var __hasOwnProp = Object.prototype.hasOwnProperty;
   var __propIsEnum = Object.prototype.propertyIsEnumerable;
@@ -20,13 +22,25 @@
   var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
   var __markAsModule = (target) => __defProp(target, "__esModule", { value: true });
   var __esm = (fn, res) => function __init() {
-    return fn && (res = (0, fn[Object.keys(fn)[0]])(fn = 0)), res;
+    return fn && (res = (0, fn[__getOwnPropNames(fn)[0]])(fn = 0)), res;
   };
   var __export = (target, all) => {
-    __markAsModule(target);
     for (var name in all)
       __defProp(target, name, { get: all[name], enumerable: true });
   };
+  var __reExport = (target, module, copyDefault, desc) => {
+    if (module && typeof module === "object" || typeof module === "function") {
+      for (let key of __getOwnPropNames(module))
+        if (!__hasOwnProp.call(target, key) && (copyDefault || key !== "default"))
+          __defProp(target, key, { get: () => module[key], enumerable: !(desc = __getOwnPropDesc(module, key)) || desc.enumerable });
+    }
+    return target;
+  };
+  var __toCommonJS = /* @__PURE__ */ ((cache) => {
+    return (module, temp) => {
+      return cache && cache.get(module) || (temp = __reExport(__markAsModule({}), module, 1), cache && cache.set(module, temp), temp);
+    };
+  })(typeof WeakMap !== "undefined" ? /* @__PURE__ */ new WeakMap() : 0);
 
   // node_modules/@create-figma-plugin/utilities/lib/events.js
   function on(name, handler) {
@@ -107,12 +121,7 @@
   });
 
   // src/votingWidget.tsx
-  function VotingResultScreen({
-    votingOptions,
-    storyName,
-    storyDescription,
-    votings
-  }) {
+  function VotingResultScreen({ votingOptions, storyName, storyDescription, votings }) {
     return /* @__PURE__ */ figma.widget.h(AutoLayout, {
       direction: "vertical",
       width: "fill-parent"
@@ -133,7 +142,8 @@
       width: "fill-parent",
       spacing: 8
     }, /* @__PURE__ */ figma.widget.h(VotingResult, {
-      votings
+      votings,
+      votingOptions
     })), /* @__PURE__ */ figma.widget.h(Spacer, {
       size: 40
     }), /* @__PURE__ */ figma.widget.h(VotingInfo, {
@@ -141,10 +151,7 @@
       votingOptions
     }));
   }
-  function VotingInfo({
-    votingOptions,
-    votings
-  }) {
+  function VotingInfo({ votingOptions, votings }) {
     const totalVotes = votings.length;
     const avgVotes = (() => {
       switch (votingOptions.kind) {
@@ -173,30 +180,30 @@
       fontSize: 12,
       fontWeight: 400,
       fill: "#054F31"
-    }, `${totalVotes} ${totalVotes == 1 ? "Vote" : "Votes"}`), avgVotes ? [
-      /* @__PURE__ */ figma.widget.h(Spacer, {
-        size: 10
-      }),
-      /* @__PURE__ */ figma.widget.h(Frame, {
-        height: 18,
-        width: 1,
-        fill: "#D1FADF"
-      }),
-      /* @__PURE__ */ figma.widget.h(Spacer, {
-        size: 10
-      }),
-      /* @__PURE__ */ figma.widget.h(Text, {
-        fontSize: 12,
-        fontWeight: 400,
-        fill: "#054F31"
-      }, avgVotes)
-    ] : void 0));
+    }, `${totalVotes} ${totalVotes == 1 ? "Vote" : "Votes"}`), avgVotes ? /* @__PURE__ */ figma.widget.h(AutoLayout, {
+      direction: "horizontal",
+      verticalAlignItems: "center",
+      width: "hug-contents"
+    }, /* @__PURE__ */ figma.widget.h(Spacer, {
+      size: 10
+    }), /* @__PURE__ */ figma.widget.h(Frame, {
+      height: 18,
+      width: 1,
+      fill: "#D1FADF"
+    }), /* @__PURE__ */ figma.widget.h(Spacer, {
+      size: 10
+    }), /* @__PURE__ */ figma.widget.h(Text, {
+      fontSize: 12,
+      fontWeight: 400,
+      fill: "#054F31"
+    }, avgVotes)) : void 0));
   }
-  function VotingResult({ votings }) {
+  function VotingResult({ votingOptions, votings }) {
     const totalVotes = votings.length;
-    const voteResults = votings.groupBy((u) => u.votedFor);
+    const voteResults = votings.groupBy((u) => u.votedFor, new Map(votingOptions.options.map((o) => [o, []])));
     return Array.from(voteResults.entries()).map(([option, userVotes]) => {
       return /* @__PURE__ */ figma.widget.h(AutoLayout, {
+        key: `${option}`,
         direction: "vertical",
         verticalAlignItems: "center",
         width: 288,
@@ -227,19 +234,21 @@
     });
   }
   function AvatarSection(users) {
-    const rows = new Array();
+    const rows = [];
     for (let i = 0; i < users.length; i += maxAvatarsPerLine) {
       rows.push(users.slice(i, i + maxAvatarsPerLine));
     }
     return /* @__PURE__ */ figma.widget.h(AutoLayout, {
       direction: "vertical",
       spacing: 8
-    }, rows.map((r) => /* @__PURE__ */ figma.widget.h(AutoLayout, {
+    }, rows.map((r, index) => /* @__PURE__ */ figma.widget.h(AutoLayout, {
+      key: `row_${index}`,
       direction: "horizontal",
       horizontalAlignItems: "end",
       spacing: 8,
       width: "fill-parent"
     }, r.map((u) => /* @__PURE__ */ figma.widget.h(Avatar, {
+      key: `avatar_${u}`,
       photoUrl: u.userPhotoUrl,
       opacity: 1
     })))));
@@ -250,11 +259,9 @@
       height: size
     });
   }
-  function Avatar({
-    photoUrl,
-    opacity
-  }) {
+  function Avatar({ photoUrl, opacity, key }) {
     return /* @__PURE__ */ figma.widget.h(Image, {
+      key,
       width: 24,
       height: 24,
       src: photoUrl,
@@ -262,10 +269,7 @@
       opacity
     });
   }
-  function Button({
-    text,
-    onClick
-  }) {
+  function Button({ text, onClick }) {
     return /* @__PURE__ */ figma.widget.h(AutoLayout, {
       width: "fill-parent",
       height: 44,
@@ -288,12 +292,13 @@
   var init_votingWidget = __esm({
     "src/votingWidget.tsx"() {
       init_voting();
-      Array.prototype.groupBy = function(fn) {
+      Array.prototype.groupBy = function(fn, to) {
+        const map = to != null ? to : /* @__PURE__ */ new Map();
         return this.reduce((m, value) => {
           var _a;
           const key = fn(value);
           return m.set(key, ((_a = m.get(key)) != null ? _a : []).concat([value]));
-        }, new Map());
+        }, map);
       };
       Array.prototype.random = function() {
         return this[Math.floor(Math.random() * this.length)];
@@ -458,9 +463,7 @@
       }
     })());
   }
-  function WelcomeScreen({
-    onClickStart
-  }) {
+  function WelcomeScreen({ onClickStart }) {
     return /* @__PURE__ */ figma.widget.h(AutoLayout2, {
       direction: "vertical",
       horizontalAlignItems: "center",
@@ -489,16 +492,14 @@
       onClick: onClickStart
     }));
   }
-  function VoteInProgress({
-    storyName,
-    storyDescription,
-    votedUserIds,
-    onClickVote
-  }) {
-    const rows = new Array();
+  function VoteInProgress({ storyName, storyDescription, votedUserIds, onClickVote }) {
+    const rows = [];
     const activeUsers = figma.activeUsers.map((u) => {
       var _a;
-      return { photoUrl: (_a = u.photoUrl) != null ? _a : "", hasVoted: votedUserIds.find((id) => id == u.sessionId) ? true : false };
+      return {
+        photoUrl: (_a = u.photoUrl) != null ? _a : "",
+        hasVoted: votedUserIds.find((id) => id == u.sessionId) ? true : false
+      };
     });
     for (let i = 0; i < activeUsers.length; i += maxAvatarsPerLine2) {
       rows.push(activeUsers.slice(i, i + maxAvatarsPerLine2));
@@ -523,12 +524,14 @@
       horizontalAlignItems: "start",
       width: "fill-parent",
       spacing: 8
-    }, rows.map((r) => /* @__PURE__ */ figma.widget.h(AutoLayout2, {
+    }, rows.map((r, index) => /* @__PURE__ */ figma.widget.h(AutoLayout2, {
+      key: `row_${index}`,
       direction: "horizontal",
       horizontalAlignItems: "start",
       spacing: 8,
       width: "fill-parent"
     }, r.map((u) => /* @__PURE__ */ figma.widget.h(Avatar, {
+      key: `avatar_${u}`,
       photoUrl: u.photoUrl,
       opacity: u.hasVoted ? 1 : 0.3
     }))))), /* @__PURE__ */ figma.widget.h(Spacer, {
@@ -583,7 +586,7 @@
   });
 
   // <stdin>
-  var modules = { "src/main.tsx--default": (init_main(), main_exports)["default"] };
+  var modules = { "src/main.tsx--default": (init_main(), __toCommonJS(main_exports))["default"] };
   var commandId = true ? "src/main.tsx--default" : figma.command;
   modules[commandId]();
 })();

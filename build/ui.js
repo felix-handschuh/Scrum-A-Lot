@@ -1,7 +1,9 @@
 (() => {
   var __defProp = Object.defineProperty;
   var __defProps = Object.defineProperties;
+  var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
   var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
+  var __getOwnPropNames = Object.getOwnPropertyNames;
   var __getOwnPropSymbols = Object.getOwnPropertySymbols;
   var __hasOwnProp = Object.prototype.hasOwnProperty;
   var __propIsEnum = Object.prototype.propertyIsEnumerable;
@@ -32,13 +34,25 @@
     return target;
   };
   var __esm = (fn, res) => function __init() {
-    return fn && (res = (0, fn[Object.keys(fn)[0]])(fn = 0)), res;
+    return fn && (res = (0, fn[__getOwnPropNames(fn)[0]])(fn = 0)), res;
   };
   var __export = (target, all) => {
-    __markAsModule(target);
     for (var name in all)
       __defProp(target, name, { get: all[name], enumerable: true });
   };
+  var __reExport = (target, module, copyDefault, desc) => {
+    if (module && typeof module === "object" || typeof module === "function") {
+      for (let key of __getOwnPropNames(module))
+        if (!__hasOwnProp.call(target, key) && (copyDefault || key !== "default"))
+          __defProp(target, key, { get: () => module[key], enumerable: !(desc = __getOwnPropDesc(module, key)) || desc.enumerable });
+    }
+    return target;
+  };
+  var __toCommonJS = /* @__PURE__ */ ((cache) => {
+    return (module, temp) => {
+      return cache && cache.get(module) || (temp = __reExport(__markAsModule({}), module, 1), cache && cache.set(module, temp), temp);
+    };
+  })(typeof WeakMap !== "undefined" ? /* @__PURE__ */ new WeakMap() : 0);
 
   // node_modules/preact/dist/preact.module.js
   function a(n2, l3) {
@@ -461,10 +475,10 @@
     }
   });
 
-  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/1b05c11a-a464-4e05-8bbd-835f34fcb290/container.js
+  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/68050f28-bc5d-4d11-9c43-75cb1d70d41d/container.js
   var container_default;
   var init_container = __esm({
-    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/1b05c11a-a464-4e05-8bbd-835f34fcb290/container.js"() {
+    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/68050f28-bc5d-4d11-9c43-75cb1d70d41d/container.js"() {
       if (document.getElementById("2da5ba188e") === null) {
         const element = document.createElement("style");
         element.id = "2da5ba188e";
@@ -641,9 +655,9 @@
     }
   });
 
-  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/c05463c1-e7aa-48fc-bd4b-164684cef01b/base.js
+  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/1825b48c-8d7b-4c63-981b-b6191e69c3ee/base.js
   var init_base = __esm({
-    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/c05463c1-e7aa-48fc-bd4b-164684cef01b/base.js"() {
+    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/1825b48c-8d7b-4c63-981b-b6191e69c3ee/base.js"() {
       if (document.getElementById("6a3ade0e8d") === null) {
         const element = document.createElement("style");
         element.id = "6a3ade0e8d";
@@ -713,10 +727,10 @@ div {
     }
   });
 
-  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/c8ce8d8c-e394-4a80-b4eb-3248b8f9aadf/input.js
+  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/773963ae-37d4-4298-94bc-ccad7959a5ab/input.js
   var input_default;
   var init_input = __esm({
-    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/c8ce8d8c-e394-4a80-b4eb-3248b8f9aadf/input.js"() {
+    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/773963ae-37d4-4298-94bc-ccad7959a5ab/input.js"() {
       if (document.getElementById("e56f442993") === null) {
         const element = document.createElement("style");
         element.id = "e56f442993";
@@ -801,10 +815,10 @@ div {
     }
   });
 
-  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/59c72480-fb26-41a2-9c89-573c1c3474fb/container.js
+  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/24295999-6ca7-4f3f-975b-ffdb3ad7c818/container.js
   var container_default2;
   var init_container2 = __esm({
-    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/59c72480-fb26-41a2-9c89-573c1c3474fb/container.js"() {
+    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/24295999-6ca7-4f3f-975b-ffdb3ad7c818/container.js"() {
       if (document.getElementById("2da5ba188e") === null) {
         const element = document.createElement("style");
         element.id = "2da5ba188e";
@@ -923,33 +937,15 @@ div {
 
   // src/components/container.tsx
   function Column(_a) {
-    var _b = _a, {
-      children,
-      spacedBy = "0px"
-    } = _b, rest = __objRest(_b, [
-      "children",
-      "spacedBy"
-    ]);
+    var _b = _a, { children, spacedBy = "0px" } = _b, rest = __objRest(_b, ["children", "spacedBy"]);
     return /* @__PURE__ */ v("div", __spreadValues({}, additionalProps(baseProps(rest, container_default2.column), ["spaced-by", spacedBy])), /* @__PURE__ */ v(d, null, children));
   }
   function Row(_a) {
-    var _b = _a, {
-      children,
-      spacedBy = "0px"
-    } = _b, rest = __objRest(_b, [
-      "children",
-      "spacedBy"
-    ]);
+    var _b = _a, { children, spacedBy = "0px" } = _b, rest = __objRest(_b, ["children", "spacedBy"]);
     return /* @__PURE__ */ v("div", __spreadValues({}, additionalProps(baseProps(rest, container_default2.row), ["spaced-by", spacedBy])), /* @__PURE__ */ v(d, null, children));
   }
   function Box(_a) {
-    var _b = _a, {
-      children,
-      fitParent
-    } = _b, rest = __objRest(_b, [
-      "children",
-      "fitParent"
-    ]);
+    var _b = _a, { children, fitParent } = _b, rest = __objRest(_b, ["children", "fitParent"]);
     return /* @__PURE__ */ v("div", __spreadValues({}, baseProps(rest, container_default2.box, fitParent ? container_default2.fitParent : void 0)), children ? /* @__PURE__ */ v(d, null, children) : void 0);
   }
   var init_container3 = __esm({
@@ -961,10 +957,7 @@ div {
   });
 
   // src/components/space.tsx
-  function Space({
-    size,
-    fillGap = false
-  }) {
+  function Space({ size, fillGap = false }) {
     return /* @__PURE__ */ v("div", {
       style: `width: ${size}; height: ${size}; flex-grow: ${fillGap ? "1" : "unset"}`
     });
@@ -1004,17 +997,7 @@ div {
     }, children)));
   }
   function Input(_a) {
-    var _b = _a, {
-      value,
-      onValueChange,
-      placeholder,
-      outlined = true
-    } = _b, rest = __objRest(_b, [
-      "value",
-      "onValueChange",
-      "placeholder",
-      "outlined"
-    ]);
+    var _b = _a, { value, onValueChange, placeholder, outlined = true } = _b, rest = __objRest(_b, ["value", "onValueChange", "placeholder", "outlined"]);
     const handleInput = A(function(event) {
       onValueChange(event.currentTarget.value);
     }, [onValueChange]);
@@ -1063,28 +1046,10 @@ div {
     }
   });
 
-  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/5740f604-fd34-4ef1-aec3-75efed0c6470/styles.js
-  var init_styles = __esm({
-    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/5740f604-fd34-4ef1-aec3-75efed0c6470/styles.js"() {
-      if (document.getElementById("5a0a0c4773") === null) {
-        const element = document.createElement("style");
-        element.id = "5a0a0c4773";
-        element.textContent = `.scrumalot-theme {
-    --color-accent: #4E5BA6;
-}
-
-.children {
-    padding: 0;
-}`;
-        document.head.append(element);
-      }
-    }
-  });
-
-  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/7bb8ab4f-d42e-451b-b4af-485685f7a335/icons.js
+  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/2c336c85-c98e-4ea8-9d79-f751de786f96/icons.js
   var icons_default;
   var init_icons = __esm({
-    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/7bb8ab4f-d42e-451b-b4af-485685f7a335/icons.js"() {
+    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/2c336c85-c98e-4ea8-9d79-f751de786f96/icons.js"() {
       if (document.getElementById("bca423e109") === null) {
         const element = document.createElement("style");
         element.id = "bca423e109";
@@ -1106,7 +1071,7 @@ div {
   function createSvgIcon(d3) {
     return /* @__PURE__ */ v("svg", {
       xmlns: "http://www.w3.org/2000/svg",
-      class: icons_default.icon,
+      className: icons_default.icon,
       viewBox: "0 0 20 20",
       fill: "currentColor"
     }, /* @__PURE__ */ v("path", {
@@ -1121,7 +1086,7 @@ div {
   function OutlinedCircle() {
     return /* @__PURE__ */ v("svg", {
       xmlns: "http://www.w3.org/2000/svg",
-      class: icons_default.icon,
+      className: icons_default.icon,
       viewBox: "0 0 20 20",
       fill: "none"
     }, /* @__PURE__ */ v("circle", {
@@ -1129,17 +1094,11 @@ div {
       cy: "10",
       r: "8",
       stroke: "currentColor",
-      "stroke-width": "2"
+      strokeWidth: "2"
     }));
   }
   function Icon(_a) {
-    var _b = _a, {
-      children,
-      tint = "currentColor"
-    } = _b, rest = __objRest(_b, [
-      "children",
-      "tint"
-    ]);
+    var _b = _a, { children, tint = "currentColor" } = _b, rest = __objRest(_b, ["children", "tint"]);
     return /* @__PURE__ */ v("div", __spreadValues({}, baseProps(__spreadProps(__spreadValues({}, rest), { content: tint }))), children);
   }
   var init_icons2 = __esm({
@@ -1150,10 +1109,10 @@ div {
     }
   });
 
-  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/ffdbb2e0-21cd-4f3e-be12-ea4274cee8c2/text.js
+  // ../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/18ea2206-a2e9-4c4c-a12a-a33451675ede/text.js
   var text_default;
   var init_text = __esm({
-    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/ffdbb2e0-21cd-4f3e-be12-ea4274cee8c2/text.js"() {
+    "../../../../private/var/folders/9r/m_z55k615gz473gh1zzltdzc0000gn/T/18ea2206-a2e9-4c4c-a12a-a33451675ede/text.js"() {
       if (document.getElementById("e4d477f233") === null) {
         const element = document.createElement("style");
         element.id = "e4d477f233";
@@ -1180,35 +1139,17 @@ div {
 
   // src/components/text.tsx
   function Text(_a) {
-    var _b = _a, {
-      children,
-      textStyleClass = text_default.text
-    } = _b, rest = __objRest(_b, [
-      "children",
-      "textStyleClass"
-    ]);
+    var _b = _a, { children, textStyleClass = text_default.text } = _b, rest = __objRest(_b, ["children", "textStyleClass"]);
     return /* @__PURE__ */ v("span", __spreadValues({}, baseProps(rest, textStyleClass)), children);
   }
   function Body2(_a) {
-    var _b = _a, {
-      children,
-      textStyleClass = text_default.body2
-    } = _b, rest = __objRest(_b, [
-      "children",
-      "textStyleClass"
-    ]);
+    var _b = _a, { children, textStyleClass = text_default.body2 } = _b, rest = __objRest(_b, ["children", "textStyleClass"]);
     return /* @__PURE__ */ v(Text, __spreadValues({
       textStyleClass
     }, rest), children);
   }
   function Caption(_a) {
-    var _b = _a, {
-      children,
-      textStyleClass = text_default.caption
-    } = _b, rest = __objRest(_b, [
-      "children",
-      "textStyleClass"
-    ]);
+    var _b = _a, { children, textStyleClass = text_default.caption } = _b, rest = __objRest(_b, ["children", "textStyleClass"]);
     return /* @__PURE__ */ v(Text, __spreadValues({
       textStyleClass
     }, rest), children);
@@ -1235,10 +1176,22 @@ div {
   var Fibonacci, FibonacciHalf, TShirtSizes, Square;
   var init_voting = __esm({
     "src/voting.tsx"() {
-      Fibonacci = { kind: "numeric", options: ["0", "1", "2", "3", "5", "8", "13", "21", "34", "55", "89", "144"] };
-      FibonacciHalf = { kind: "numeric", options: ["0", "0.5", "1", "2", "3", "5", "8", "13", "21", "34", "55", "89", "144"] };
-      TShirtSizes = { kind: "categorical", options: ["XS", "S", "M", "L", "XL", "XXL"] };
-      Square = { kind: "numeric", options: ["0", "1", "2", "4", "8", "16", "32", "64", "128", "256"] };
+      Fibonacci = {
+        kind: "numeric",
+        options: ["0", "1", "2", "3", "5", "8", "13", "21", "34", "55", "89", "144"]
+      };
+      FibonacciHalf = {
+        kind: "numeric",
+        options: ["0", "0.5", "1", "2", "3", "5", "8", "13", "21", "34", "55", "89", "144"]
+      };
+      TShirtSizes = {
+        kind: "categorical",
+        options: ["XS", "S", "M", "L", "XL", "XXL"]
+      };
+      Square = {
+        kind: "numeric",
+        options: ["0", "1", "2", "4", "8", "16", "32", "64", "128", "256"]
+      };
     }
   });
 
@@ -1248,12 +1201,7 @@ div {
     default: () => ui_default
   });
   function InitVotePlugin() {
-    const votingOptionsList = [
-      Fibonacci,
-      FibonacciHalf,
-      TShirtSizes,
-      Square
-    ];
+    const votingOptionsList = [Fibonacci, FibonacciHalf, TShirtSizes, Square];
     const [storyName, setStoryName] = l2("");
     const [storyDescription, setStoryDescription] = l2("");
     const [votingChoice, setVotingChoice] = l2(0);
@@ -1288,6 +1236,7 @@ div {
       alignment: "fill"
     }, votingOptionsList.map((opt, index) => {
       return /* @__PURE__ */ v(SCRadioInput, {
+        key: `${opt}_${index}`,
         text: summaryOfVotingOptions(opt),
         checked: votingChoice == index,
         onClick: () => {
@@ -1303,12 +1252,7 @@ div {
       enabled: storyName.length > 2 && storyDescription.length > 2
     }, "Start")));
   }
-  function VotePlugin({
-    votingOptions,
-    storyName,
-    storyDescription,
-    votedFor
-  }) {
+  function VotePlugin({ votingOptions, storyName, storyDescription, votedFor }) {
     const [vote, setVote] = l2(votedFor ? votingOptions.options.indexOf(votedFor) : -1);
     const handleOnSubmit = A(() => {
       emit("SET_VOTE", votingOptions.options[vote]);
@@ -1329,6 +1273,7 @@ div {
       alignment: "fill"
     }, votingOptions.options.map((opt, index) => {
       return /* @__PURE__ */ v(SCRadioInput, {
+        key: `${opt}_${index}`,
         text: summaryOfVote(opt),
         checked: vote == index,
         onClick: () => {
@@ -1395,7 +1340,6 @@ div {
       init_lib();
       init_hooks_module();
       init_input2();
-      init_styles();
       init_container3();
       init_space();
       init_icons2();
@@ -1406,7 +1350,7 @@ div {
 
   // <stdin>
   var rootNode = document.getElementById("create-figma-plugin");
-  var modules = { "src/main.tsx--default": (init_ui(), ui_exports)["default"] };
+  var modules = { "src/main.tsx--default": (init_ui(), __toCommonJS(ui_exports))["default"] };
   var commandId = __FIGMA_COMMAND__ === "" ? "src/main.tsx--default" : __FIGMA_COMMAND__;
   if (typeof modules[commandId] === "undefined") {
     throw new Error("No UI defined for command `" + commandId + "`");

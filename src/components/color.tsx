@@ -1,5 +1,4 @@
-
 export type ColorProps = {
-    content?: string,
-    background?: string
+  content?: string
+  background?: string
 }
