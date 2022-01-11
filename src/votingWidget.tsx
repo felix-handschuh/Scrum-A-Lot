@@ -125,10 +125,12 @@ function VotingInfo({ votingOptions, votings }: { votingOptions: VotingOptions; 
 }
 
 function VotingResult({ votingOptions, votings }: { votingOptions: VotingOptions; votings: UserVote[] }) {
+  const voteResults = Array.from(
+    votings.groupBy((u) => u.votedFor, new Map(votingOptions.options.map((o) => [o, []]))).entries(),
+  ).filter(([_, userVotes]) => userVotes.length > 0)
   const totalVotes = votings.length
-  const voteResults = votings.groupBy((u) => u.votedFor, new Map(votingOptions.options.map((o) => [o, []])))
 
-  return Array.from(voteResults.entries()).map(([option, userVotes]) => {
+  return voteResults.map(([option, userVotes]) => {
     return (
       <AutoLayout
         key={`${option}`}
