@@ -4,3 +4,4 @@ package-lock.json
 *.d.ts
 .vscode
 .DS_Store
+.manifest.json
