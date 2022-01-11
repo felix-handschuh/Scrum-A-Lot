@@ -29,11 +29,4 @@ export const logo = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
 <path d="M3.03432 8.81198C2.89138 8.27852 3.20796 7.73018 3.74143 7.58724L9.53698 6.03432C10.0704 5.89138 10.6188 6.20796 10.7617 6.74143L13.3499 16.4007C13.4929 16.9342 13.1763 17.4825 12.6428 17.6254L6.84726 19.1783C6.31379 19.3213 5.76545 19.0047 5.62251 18.4712L3.03432 8.81198Z" fill="#EAECF5"/>
 </svg>`
 
-export const WidgetLogo = () => (
-  <AutoLayout direction='horizontal' verticalAlignItems='center' spacing={4}>
-    <SVG src={logo} />
-    <Text fontSize={9} fontWeight='bold' horizontalAlignText='center' fill='#000000'>
-      Scrumalot
-    </Text>
-  </AutoLayout>
-)
+export const WidgetLogo = () => <SVG src={logo} />

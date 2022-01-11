@@ -1,6 +1,7 @@
 /** @jsx figma.widget.h */
 
 import { once, showUI } from '@create-figma-plugin/utilities'
+import { WidgetLogo } from './logo'
 import {
   VotingOptions,
   UserVote,
@@ -212,9 +213,14 @@ type WelcomeScreenProps = {
 function WelcomeScreen({ onClickStart }: WelcomeScreenProps) {
   return (
     <AutoLayout direction='vertical' horizontalAlignItems='center' width='fill-parent'>
-      <Text fontSize={18} fontWeight={600} horizontalAlignText='center' fill='#000000'>
-        Scrum-A-Lot
-      </Text>
+      <AutoLayout direction='horizontal' width='hug-contents' verticalAlignItems='center'>
+        <WidgetLogo />
+        <Spacer size={4} />
+        <Text fontSize={18} fontWeight={600} horizontalAlignText='center' fill='#000000'>
+          Scrum-A-Lot
+        </Text>
+      </AutoLayout>
+
       <Spacer size={4} />
       <Text fontSize={14} fontWeight={400} horizontalAlignText='center' fill='#667085'>
         Start with creating a story and let your
