@@ -4,4 +4,4 @@ build/
 .vscode
 .DS_Store
 manifest.json
-build.zip
+build*.zip
