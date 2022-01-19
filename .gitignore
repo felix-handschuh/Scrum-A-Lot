@@ -3,4 +3,4 @@ build/
 *.d.ts
 .vscode
 .DS_Store
-.manifest.json
+manifest.json

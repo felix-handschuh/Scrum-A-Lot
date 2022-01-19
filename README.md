@@ -1,6 +1,8 @@
 # Scrum-A-Lot
 
-TODO
+TODO Link FigJam
+
+[Scrum-A-Lot](https://scrumalot.team/)
 
 ## Development guide
 
@@ -38,4 +40,4 @@ $ npm run lintFormat
 
 ## Licence
 
-This project is licenced under the TODO.
+This project is licensed under the GPLv3.
