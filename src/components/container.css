@@ -1,0 +1,124 @@
+/**
+ * Copyright (C) 2022 Felix Handschuh, Tobias Schwerdtfeger
+ * 
+ * This file is part of Scrum-A-Lot.
+ * 
+ * Scrum-A-Lot is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * Scrum-A-Lot is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with Scrum-A-Lot.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+
+.column {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--spaced-by);
+}
+
+.column > * {
+    align-self: flex-start;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    column-gap: var(--spaced-by);
+}
+
+.row > * {
+    align-self: flex-start;
+}
+
+.box {
+    display: grid;
+}
+
+.fitParent {
+    width: 100%;
+    height: 100%;
+}
+
+.box > * {
+    place-self: start;
+}
+
+.column > .alignStart {
+    align-self: flex-start;
+}
+
+.column > .alignEnd {
+    align-self: flex-end;
+}
+
+.column > .alignCenter {
+    align-self: center;
+}
+
+.column > .alignFill {
+    align-self: stretch;
+}
+
+.row > .alignStart {
+    align-self: flex-start;
+}
+
+.row > .alignEnd {
+    align-self: flex-end;
+}
+
+.row > .alignCenter {
+    align-self: center;
+}
+
+.row > .alignFill {
+    align-self: stretch;
+}
+
+.box > .alignStart {
+    place-self: center start;
+}
+
+.box > .alignEnd {
+    place-self: center end;
+}
+
+.box > .alignCenter {
+    place-self: center;
+}
+
+.box > .alignFill {
+    place-self: stretch;
+}
+
+.box > .alignTopStart {
+    place-self: start;
+}
+
+.box > .alignTopCenter {
+    place-self: start center;
+}
+
+.box > .alignTopEnd {
+    place-self: start end;
+}
+
+.box > .alignBottomStart {
+    place-self: end start;
+}
+
+.box > .alignBottomCenter {
+    place-self: end center;
+}
+
+.box > .alignBottomEnd {
+    place-self: end;
+}
