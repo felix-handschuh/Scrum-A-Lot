@@ -21,7 +21,8 @@
     "build": "build-figma-plugin --typecheck --minify",
     "watch": "build-figma-plugin --typecheck --watch",
     "lint": "eslint . --ext .ts,.tsx",
-    "lintFormat": "eslint . --ext .ts,.tsx --fix"
+    "lintFormat": "eslint . --ext .ts,.tsx --fix",
+    "zip": "zip build.zip manifest.json build/main.js build/ui.js"
   },
   "figma-plugin": {
     "editorType": [
