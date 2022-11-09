@@ -1,17 +1,17 @@
 // Copyright (C) 2022 Felix Handschuh, Tobias Schwerdtfeger
-// 
+//
 // This file is part of Scrum-A-Lot.
-// 
+//
 // Scrum-A-Lot is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
-// 
+//
 // Scrum-A-Lot is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
-// 
+//
 // You should have received a copy of the GNU General Public License
 // along with Scrum-A-Lot.  If not, see <http://www.gnu.org/licenses/>.
 
@@ -27,6 +27,7 @@ import {
   VotingData,
   InitVotingData,
   summaryOfVote,
+  WidgetUser,
 } from './voting'
 import { Avatar, Button, Spacer, VotingResultScreen } from './votingWidget'
 
@@ -75,6 +76,7 @@ type UiState =
       votingOptions: VotingOptions
       storyName: string
       storyDescription: string
+      activeWidgetUsers: WidgetUser[]
     }
   | {
       votingState: 'Revealed'
@@ -160,7 +162,7 @@ function Scrumalot() {
             return (
               <WelcomeScreen
                 onClickStart={() => {
-                  showUI<InitVotingData>({ width: 240, height: 344 }, { name: 'INIT_VOTING_DATA' })
+                  showUI<InitVotingData>({ width: 240, height: 400 }, { name: 'INIT_VOTING_DATA' })
                   once<SetVotingEvent>('SET_VOTING', (options, storyName, storyDescription) => {
                     if (uiState.votingState == 'NotStarted') {
                       setUiState({
@@ -168,6 +170,9 @@ function Scrumalot() {
                         votingOptions: options,
                         storyName: storyName,
                         storyDescription: storyDescription,
+                        activeWidgetUsers: figma.activeUsers.map((u) => {
+                          return { userId: u.sessionId, userPhotoUrl: u.photoUrl ?? '' }
+                        }),
                       })
                     }
                     figma.closePlugin()
@@ -182,7 +187,7 @@ function Scrumalot() {
                 votedUserIds={voteMap.values().map((u) => u.userId)}
                 onClickVote={() => {
                   showUI<VotingData>(
-                    { width: 240, height: 344 },
+                    { width: 240, height: 436 },
                     {
                       name: 'VOTING_DATA',
                       votingOptions: uiState.votingOptions,
@@ -256,11 +261,18 @@ const maxAvatarsPerLine = 6
 type VoteInProgressScreenProps = {
   storyName: string
   storyDescription: string
+  activeWidgetUsers: WidgetUser[]
   votedUserIds: number[]
   onClickVote: () => void
 }
 
-function VoteInProgress({ storyName, storyDescription, votedUserIds, onClickVote }: VoteInProgressScreenProps) {
+function VoteInProgress({
+  storyName,
+  storyDescription,
+  activeWidgetUsers,
+  votedUserIds,
+  onClickVote,
+}: VoteInProgressScreenProps) {
   type UserWithAvatar = {
     photoUrl: string
     hasVoted: boolean
@@ -268,10 +280,10 @@ function VoteInProgress({ storyName, storyDescription, votedUserIds, onClickVote
 
   const rows: UserWithAvatar[][] = []
 
-  const activeUsers: UserWithAvatar[] = figma.activeUsers.map((u) => {
+  const activeUsers: UserWithAvatar[] = activeWidgetUsers.map((u) => {
     return {
-      photoUrl: u.photoUrl ?? '',
-      hasVoted: votedUserIds.find((id) => id == u.sessionId) ? true : false,
+      photoUrl: u.userPhotoUrl ?? '',
+      hasVoted: votedUserIds.find((id) => id == u.userId) ? true : false,
     }
   })
   for (let i = 0; i < activeUsers.length; i += maxAvatarsPerLine) {

@@ -1,17 +1,17 @@
 // Copyright (C) 2022 Felix Handschuh, Tobias Schwerdtfeger
-// 
+//
 // This file is part of Scrum-A-Lot.
-// 
+//
 // Scrum-A-Lot is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
-// 
+//
 // Scrum-A-Lot is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
-// 
+//
 // You should have received a copy of the GNU General Public License
 // along with Scrum-A-Lot.  If not, see <http://www.gnu.org/licenses/>.
 
@@ -55,11 +55,11 @@ export type VotingOptions =
 
 export const Fibonacci: VotingOptions = {
   kind: 'numeric',
-  options: ['0', '1', '2', '3', '5', '8', '13', '21', '34', '55', '89', '144'],
+  options: ['0', '1', '2', '3', '5', '8', '13', '21'],
 }
 export const FibonacciHalf: VotingOptions = {
   kind: 'numeric',
-  options: ['0', '0.5', '1', '2', '3', '5', '8', '13', '21', '34', '55', '89', '144'],
+  options: ['0', '0.5', '1', '2', '3', '5', '8', '13', '21'],
 }
 export const TShirtSizes: VotingOptions = {
   kind: 'categorical',
@@ -67,7 +67,11 @@ export const TShirtSizes: VotingOptions = {
 }
 export const Square: VotingOptions = {
   kind: 'numeric',
-  options: ['0', '1', '2', '4', '8', '16', '32', '64', '128', '256'],
+  options: ['0', '1', '2', '4', '8', '16', '32', '64'],
+}
+export const Awesome: VotingOptions = {
+  kind: 'categorical',
+  options: ['☕️', '🛁', '🛌', '💸', '🐌', '🍻', '💩'],
 }
 
 export function summaryOfVotingOptions(s: VotingOptions): string {

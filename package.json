@@ -26,7 +26,8 @@
   },
   "figma-plugin": {
     "editorType": [
-      "figjam"
+      "figjam",
+      "figma"
     ],
     "permissions": [
       "currentuser",

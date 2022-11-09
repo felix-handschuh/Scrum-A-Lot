@@ -1,17 +1,17 @@
 // Copyright (C) 2022 Felix Handschuh, Tobias Schwerdtfeger
-// 
+//
 // This file is part of Scrum-A-Lot.
-// 
+//
 // Scrum-A-Lot is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
-// 
+//
 // Scrum-A-Lot is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
-// 
+//
 // You should have received a copy of the GNU General Public License
 // along with Scrum-A-Lot.  If not, see <http://www.gnu.org/licenses/>.
 
@@ -37,17 +37,23 @@ import {
   summaryOfVote,
   summaryOfVotingOptions,
   TShirtSizes,
+  Awesome,
   VotingData,
 } from './voting'
 
 function InitVotePlugin() {
-  const votingOptionsList = [Fibonacci, FibonacciHalf, TShirtSizes, Square]
+  const votingOptionsList = [Fibonacci, FibonacciHalf, TShirtSizes, Square, Awesome]
 
   const [storyName, setStoryName] = useState('')
   const [storyDescription, setStoryDescription] = useState('')
   const [votingChoice, setVotingChoice] = useState(0)
   const handleOnStart = useCallback(() => {
-    emit<SetVotingEvent>('SET_VOTING', votingOptionsList[votingChoice], storyName, storyDescription)
+    emit<SetVotingEvent>(
+      'SET_VOTING',
+      votingOptionsList[votingChoice],
+      storyName.trim() != '' ? storyName : 'No Title',
+      storyDescription,
+    )
   }, [storyName, storyDescription, votingChoice])
   return (
     <Box fitParent={true}>
@@ -85,7 +91,7 @@ function InitVotePlugin() {
           })}
         </Column>
         <Space size='24px' fillGap={true} />
-        <Button alignment='fill' onClick={handleOnStart} enabled={storyName.length > 2 && storyDescription.length > 2}>
+        <Button alignment='fill' onClick={handleOnStart} enabled={true}>
           Start
         </Button>
       </Column>
@@ -122,7 +128,7 @@ function VotePlugin({ votingOptions, storyName, storyDescription, votedFor }: Vo
           })}
         </Column>
         <Space size='24px' fillGap={true} />
-        <Button alignment='fill' onClick={handleOnSubmit}>
+        <Button alignment='fill' onClick={handleOnSubmit} enabled={vote != -1}>
           Submit
         </Button>
       </Column>
