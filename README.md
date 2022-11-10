@@ -1,8 +1,8 @@
 # Scrum-A-Lot
 
-TODO Link FigJam
+👉 Get the widget for [Figma or FigJam](https://www.figma.com/community/widget/1072985192032373399)
 
-[Scrum-A-Lot](https://scrumalot.team/)
+🌍 [Scrum-A-Lot](https://scrumalot.team/)
 
 ## Development guide
 
